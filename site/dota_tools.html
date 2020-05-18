@@ -1,26 +1,81 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>dota tools</title>
-</head>
-<body style="background-color: black">
 	<meta charset="utf-8">
+	<title>dota tools</title>
+	<style type="text/css">
+
+		section > ul{
+			font-size: 25px;
+		}
+		section > div{
+			font-size: 40px;
+			text-align: left;
+		}
+		img{
+			width: 100px;
+			height: 100px;
+		}
+
+		#Tier1, #Links_Tier a:nth-child(1){
+			color: lime;
+		}
+		#Tier1 li > ul > li > ul, #Tier1 li > ul > ul,  #Tier1 li span {
+			color: blueviolet;
+		} 
+
+		#Tier2, #Links_Tier a:nth-child(2){
+			color: yellow;
+		}
+		#Tier2 li > ul > li > ul, #Tier2 li > ul > ul, #Tier2 li span {
+			color: aqua;
+		} 
+		
+
+		#Tier3, #Links_Tier a:nth-child(3){
+			color: fuchsia;
+		}
+		#Tier3 li > ul > li > ul, #Tier3 li > ul > ul, #Tier3 li span {
+			color: slateblue;
+		} 
+
+		
+
+		#Links_Tier a:link, a:visited{
+			text-decoration: none;
+			font-size: 30px;
+			
+		}
+
+		#Links_Tier a:hover, a:active{
+			font-size: 35px;
+		}
+
+		
+
+
+	</style>
+</head>
+
+<body style="background-color: black">
 <h1 id = "Start", style="color: white; font-size: 55px; text-align: center;">Neutral items</h1>
-<section>
-	<a href="#Tier1" style="color: lime; font-size: 25px;">Tier1</a>
-	<a href="#Tier2" style="color: yellow; font-size: 25px; margin-left: 50px">Tier2</a>
-	<a href="#Tier3" style="color: fuchsia; font-size: 25px; margin-left: 50px">Tier3</a>
+<section id="Links_Tier">
+	<div>
+	<a href="#Tier1">Tier1</a>
+	<a href="#Tier2" style="margin-left: 50px">Tier2</a>
+	<a href="#Tier3" style="margin-left: 50px">Tier3</a>
+	</div>
 </section>
 <br><br><br>
-<section id = "Tier1", style="color: lime;">
-	<div style="font-size: 40px; text-align: left">Tier 1<a href="index.html", style="color: transparent; font-size: 50px">Back</a></div>
-	<ul style="font-size: 25px">
+<section id = "Tier1">
+	<div>Tier 1<!--<a href="index.html", style="color: transparent; font-size: 50px">Back</a>--></div>
+	<ul>
 		<li>Arcane Ring
-			<div><img src="images/Arcane_Ring.png" width="100" height="100"></div>
+			<div><img src="images/Arcane_Ring.png"></div>
 			<ul>
-				<li>Active: <span style="color: blueviolet">Restores 75 mana to all nearby allies</span></li>
+				<li>Active: <span>Restores 75 mana to all nearby allies</span></li>
 				<li>Bonus:
-					<ul style="color: blueviolet">
+					<ul>
 						<li>+10 Intelligence</li>
 						<li>+3 Armor</li>
 					</ul>
@@ -29,9 +84,9 @@
 		</li>
 		<br>
 		<li>Broom Handle
-			<div><img src="images/Broom_Handle.png" width="100" height="100"></div>
+			<div><img src="images/Broom_Handle.png"></div>
 			<ul><li>Bonus:</li>
-				<ul style="color: blueviolet">
+				<ul>
 					<li>+3 Armor</li>
 					<li>+12 Attack damage</li>
 					<li>+35 Attack range(melee)</li>
@@ -40,9 +95,9 @@
 		</li>
 		<br>
 		<li>Faded Broach
-			<div><img src="images/Faded_Broach.png" width="100" height="100"></div>
+			<div><img src="images/Faded_Broach.png"></div>
 			<ul><li>Bonus:</li>	
-				<ul style="color: blueviolet">
+				<ul>
 					<li>+200 Mana</li>
 					<li>+25 Movement speed</li>
 				</ul>		
@@ -50,11 +105,11 @@
 		</li>
 		<br>
 		<li>Ocean Heart
-			<div><img src="images/Ocean_Heart.png" width="100" height="100"></div>
+			<div><img src="images/Ocean_Heart.png"></div>
 			<ul>
-				<li>Passive: <span style="color: blueviolet">Water Regen</span></li>
+				<li>Passive: <span>Water Regen</span></li>
 				<li>Bonus:
-				<ul style="color: blueviolet">
+				<ul>
 					<li>+5 Strength</li>
 					<li>+5 Agility</li>
 					<li>+5 Intelligence</li>
@@ -64,11 +119,11 @@
 		</li>
 		<br>
 		<li>Trusty Shovel
-			<div><img src="images/Trusty_Shovel.png" width="100" heigth="100"></div>
+			<div><img src="images/Trusty_Shovel.png"></div>
 			<ul>
-				<li>Active: <span style="color: blueviolet">Dig</span></li>
+				<li>Active: <span>Dig</span></li>
 				<li>Bonus:
-					<ul style="color: blueviolet">
+					<ul>
 						<li>+100 Health</li>
 					</ul>
 				</li>
@@ -76,11 +131,11 @@
 		</li>
 		<br>
 		<li>Poor Man's Shield
-			<div><img src="images/Poor_Man's_Shield.png" width="100" heigth="100"></div>
+			<div><img src="images/Poor_Man's_Shield.png"></div>
 			<ul>
-				<li>Passive: <span style="color: blueviolet">Damage Block</span></li>
+				<li>Passive: <span>Damage Block</span></li>
 				<li>Bonus:
-					<ul style="color: blueviolet">
+					<ul>
 						<li>+8 Agility</li>
 					</ul>
 				</li>
@@ -88,11 +143,11 @@
 		</li>
 		<br>
 		<li>Ironwood Tree
-			<div><img src="images/Ironwood_Tree.png" width="100" heigth="100"></div>
+			<div><img src="images/Ironwood_Tree.png"></div>
 			<ul>
-				<li>Active: <span style="color: blueviolet">Plant Tree</span></li>
+				<li>Active: <span>Plant Tree</span></li>
 				<li>Bonus:
-					<ul style="color: blueviolet">
+					<ul>
 						<li>+6 All Attributes</li>
 					</ul>
 				</li>
@@ -102,15 +157,15 @@
 	</ul>
 </section>
 <br><br>
-<section id="Tier2" style="color: yellow">
-	<div style="font-size: 40px; text-align: left">Tier 2</div>
-	<ul style="font-size: 25px">
+<section id="Tier2">
+	<div>Tier 2</div>
+	<ul>
 		<li>Imp Claw
-			<div><img src="images/Imp_Claw.png" width="100" heigth="100"></div>
+			<div><img src="images/Imp_Claw.png"></div>
 			<ul>
-				<li>Passive: <span style="color: aqua">120% Critical Strike</span></li>
+				<li>Passive: <span>120% Critical Strike</span></li>
 				<li>Bonus:
-					<ul style="color: aqua">
+					<ul>
 						<li>+24 Attack Damage</li>
 					</ul>
 				</li>
@@ -118,11 +173,11 @@
 		</li>
 		<br>
 		<li>Ring of Aquila
-			<div><img src="images/Ring_Of_Aquila.png" width="100" heigth="100"></div>
+			<div><img src="images/Ring_Of_Aquila.png"></div>
 			<ul>
-				<li>Passive: <span style="color: aqua">Aquila Aura</span></li>
+				<li>Passive: <span>Aquila Aura</span></li>
 				<li>Bonus:
-					<ul style="color: aqua">
+					<ul>
 						<li>+3 Strength</li>
 						<li>+9 Agility</li>
 						<li>+3 Intelligence</li>
@@ -133,10 +188,10 @@
 		</li>
 		<br>
 		<li>Pupil's Gift
-			<div><img src="images/Pupil's_Gift.png" width="100" heigth="100"></div>
+			<div><img src="images/Pupil's_Gift.png"></div>
 			<ul>
 				<li>Bonus:
-					<ul style="color: aqua">
+					<ul>
 						<li>+13 Secondary Attributes</li>
 					</ul>
 				</li>
@@ -144,10 +199,10 @@
 		</li>
 		<br>
 		<li>Vampire Fangs
-			<div><img src="images/Vampire_Fangs.png" width="100" height="100"></div>
+			<div><img src="images/Vampire_Fangs.png"></div>
 			<ul>
 				<li>Bonus:</li>
-				<ul style="color: aqua">
+				<ul>
 					<li>+15% Lifesteal</li>
 					<li>+6% Spell Lifesteal</li>
 					<li>+250 Night Vision</li>
@@ -156,11 +211,11 @@
 		</li>
 		<br>
 		<li>Dragon Scale
-			<div><img src="images/Dragon_Scale.png" width="100" height="100"></div>
+			<div><img src="images/Dragon_Scale.png" ></div>
 			<ul>
-				<li>Passive: <span style="color: aqua">Afterburn</span></li>
+				<li>Passive: <span>Afterburn</span></li>
 				<li>Bonus:
-					<ul style="color: aqua">
+					<ul>
 						<li>+5 Health Regeneration</li>
 						<li>+5 Armor</li>
 					</ul>
@@ -169,11 +224,11 @@
 		</li>
 		<br>
 		<li>Grove Bow
-			<div><img src="images/Grove_Bow.png" width="100" heigth="100"></div>
+			<div><img src="images/Grove_Bow.png"></div>
 			<ul>
-				<li>Passive: <span style="color: aqua">Magic Amp</span></li>
+				<li>Passive: <span>Magic Amp</span></li>
 				<li>Bonus:
-					<ul style="color: aqua">
+					<ul>
 						<li>+15 Attack Speed</li>
 						<li>+100 Attack Range (ranged)</li>
 					</ul>
@@ -182,16 +237,16 @@
 		<br>
 		</li>
 		<li>Vambrace
-			<div><img src="images/Vambrace.png" width="100" height="100"></div>
+			<div><img src="images/Vambrace.png"></div>
 			<ul>
 				<li>Bonus:
-					<ul style="color: aqua">
+					<ul>
 						<li>+10 Primary Attribute</li>
 						<li>+5 Secondary Attributes</li>
 					</ul>
 				</li>
 				<li>Primary Bonus:
-					<ul style="color: aqua">
+					<ul>
 						<li>+10% Magic Resistance <span style="color: red">(Strength)</span></li>
 						<li>+10 Attack speed <span style="color: lime">(Agility)</span></li>
 						<li>+6% Spell damage <span style="color: royalblue">(Intelligence)</span></li>
@@ -202,14 +257,14 @@
 	</ul>
 </section>
 <br>
-<section id="Tier3" style="color: fuchsia">
-	<div style="font-size: 40px; text-align: left">Tier 3</div>
-	<ul style="font-size: 25px">
+<section id="Tier3">
+	<div>Tier 3</div>
+	<ul>
 		<li>Craggy Coat
-			<div><img src="images/Craggy_Coat.png" width="100" height="100"></div>
+			<div><img src="images/Craggy_Coat.png"></div>
 			<ul>
 				<li>Bonus:</li>
-				<ul style="color: slateblue">
+				<ul>
 					<li>+12 Armor</li>
 					<li>-35 Attack Speed</li>
 				</ul>
@@ -217,29 +272,29 @@
 		</li>
 		<br>
 		<li>Orb of Destruction
-			<div><img src="images/Orb_Of_Destruction.png" width="100" height="100"></div>
+			<div><img src="images/Orb_Of_Destruction.png"></div>
 			<ul>
-				<li>Passive: <span style="color: slateblue">Impending Corruption</span></li>
-				<li>Duration: <span style="color: slateblue">4 sec</span></li>
-				<li>Armor Reduction: <span style="color: slateblue">5</span></li>
+				<li>Passive: <span>Impending Corruption</span></li>
+				<li>Duration: <span>4 sec</span></li>
+				<li>Armor Reduction: <span>5</span></li>
 			</ul>
 		</li>
 		<br>
 		<li>Enchanted Quiver
-			<div><img src="images/Enchanted_Quiver.png" width="100" height="100"></div>
+			<div><img src="images/Enchanted_Quiver.png"></div>
 			<ul>
-				<li>Passive: <span style="color: slateblue">Certain Strike</span></li>
-				<li>Attack Range Bonus: <span style="color: slateblue">400</span></li>
-				<li>Magic Damage: <span style="color: slateblue">300</span></li>
+				<li>Passive: <span>Certain Strike</span></li>
+				<li>Attack Range Bonus: <span>400</span></li>
+				<li>Magic Damage: <span>300</span></li>
 			</ul>
 		</li>
 		<br>
 		<li>Quickening Charm
-			<div><img src="images/Quickening_Charm.png" width="100" height="100"></div>
+			<div><img src="images/Quickening_Charm.png"></div>
 			<ul>
-				<li>Passive: <span style="color: slateblue">Cooldown Reduction 13%</span></li>
+				<li>Passive: <span>Cooldown Reduction 13%</span></li>
 				<li>Bonus:
-					<ul style="color: slateblue">
+					<ul>
 						<li>+9 Health Regeneration</li>
 					</ul>
 				</li>
@@ -247,24 +302,24 @@
 		</li>
 		<br>
 		<li>Mind Breaker
-			<div><img src="images/Mind_Breaker.png" width="100" height="100"></div>
+			<div><img src="images/Mind_Breaker.png"></div>
 			<ul>
-				<li>Passive: <span style="color: slateblue">Silence Strike</span></li>
+				<li>Passive: <span>Silence Strike</span></li>
 				<li>Bonus:
-					<ul style="color: slateblue">
+					<ul>
 						<li>+25 Attack Speed</li>
 						<li>+25 Attack Damage</li>
 					</ul>
 				</li>
-				<li>Duration: <span style="color: slateblue">1.5 sec</span></li>
+				<li>Duration: <span>1.5 sec</span></li>
 			</ul>
 		</li>
 		<br>
 		<li>Titan Sliver
-			<div><img src="images/Titan_Sliver.png" width="100" height="100"></div>
+			<div><img src="images/Titan_Sliver.png"></div>
 			<ul>
 				<li>Bonus:</li>
-				<ul style="color: slateblue">
+				<ul>
 					<li>+16% Base attack damage</li>
 					<li>+16% Magic resistance</li>
 					<li>+16% Status resistance</li>
@@ -273,11 +328,11 @@
 		</li>
 		<br>
 		<li>Paladin Sword
-			<div><img src="images/Paladin_Sword.png" width="100" height="100"></div>
+			<div><img src="images/Paladin_Sword.png"></div>
 			<ul>
-				<li>Passive: <span style="color: slateblue">Greater Healing</span></li>
+				<li>Passive: <span>Greater Healing</span></li>
 				<li>Bonus:
-					<ul style="color: slateblue">
+					<ul>
 						<li>+17 Attack damage</li>
 						<li>+17% Lifesteal</li>
 					</ul>

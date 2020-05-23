@@ -7,7 +7,7 @@
 
 /*  HEADING  */
 h1{
-	margin-top:50px;
+	margin-top: 50px;
 	text-align: center;
 	margin-bottom: 40px;
 	font-size: 175%;
@@ -19,6 +19,7 @@ h1{
 body{
 	font-family: Lucida Console, Courier, monospace;
 }
+
 span{
 	display: none;
 }
@@ -90,7 +91,6 @@ span{
 	.section_3{
 		width: 98%;
 	}
-
 	span{
 		display: inline-block;
 	}

@@ -19,6 +19,9 @@ h1{
 body{
 	font-family: Lucida Console, Courier, monospace;
 }
+span{
+	display: none;
+}
 
 
 /*  SECTIONS  */
@@ -28,6 +31,7 @@ body{
 	border: 1px solid black;
 	width: 31%;
 	padding: 50px 10px 15px 10px;
+	min-height: 190px;
 	margin-left: 1.5%;
 	margin-right: 0.5%;
 	margin-top:20px;
@@ -86,6 +90,10 @@ body{
 	.section_3{
 		width: 98%;
 	}
+
+	span{
+		display: inline-block;
+	}
 }
 
 @media (max-width: 767px){
@@ -93,5 +101,6 @@ body{
 		margin-left: 5%;
 		margin-right: 5%;
 		width: 90%;
+		text-align: justify-all;
 	}
 }

@@ -1,0 +1,97 @@
+*{
+	margin: 0px;
+	box-sizing: border-box;
+	font-size: 20px;
+}
+
+
+/*  HEADING  */
+h1{
+	margin-top:50px;
+	text-align: center;
+	margin-bottom: 40px;
+	font-size: 175%;
+}
+
+
+
+/*  BODY  */
+body{
+	font-family: Lucida Console, Courier, monospace;
+}
+
+
+/*  SECTIONS  */
+.section{
+	position: relative;
+	float: left;
+	border: 1px solid black;
+	width: 31%;
+	padding: 50px 10px 15px 10px;
+	margin-left: 1.5%;
+	margin-right: 0.5%;
+	margin-top:20px;
+}
+
+
+.section_1{
+	background: linear-gradient(to right, #FF0000, #FFFF00);
+}
+
+.section_2{
+	background: linear-gradient(to right, #00FF00, #00FFFF);
+}
+
+.section_3{
+	background: linear-gradient(to right, #9400D3, #FF0000);
+}
+/*  TITLES  */
+.title{
+	position: absolute;
+	color: #000000;
+	font-size: 125%;
+	border: 1px solid black;
+	top: 0px;
+	right: 0px;
+	width: 150px;
+	text-align: center;
+	padding: 5px;
+}
+
+.title_1{
+	background: linear-gradient(to right, #00FFFF, #0000FF);
+	opacity: 1;
+}
+.title_2{
+	background: linear-gradient(to right, #FF00FF, #FF0000);
+}
+
+.title_3{
+	background: linear-gradient(to right, #6BFF2C, #00FFFF);
+}
+
+/*  CONTENT  */
+.content{
+	color: #000000;
+}
+
+
+
+@media (max-width: 991px) and (min-width: 768px){
+	.section{
+		width: 48%;
+		margin-left: 1%;
+		margin-right: 1%;
+	}
+	.section_3{
+		width: 98%;
+	}
+}
+
+@media (max-width: 767px){
+	.section{
+		margin-left: 5%;
+		margin-right: 5%;
+		width: 90%;
+	}
+}

@@ -2,7 +2,7 @@
 	box-sizing: border-box;
 }
 :root{
-	--main-color:#808080;
+	--main-bg: #808080;
 
 }
 body{
@@ -14,7 +14,7 @@ body{
 
 /*Navigation*/
 #header-nav{
-	background: var(--main-color);
+	background: var(--main-bg);
 	border-radius: 0;
 	border:0;
 	border-bottom: 2px solid #000000;
@@ -67,7 +67,7 @@ body{
 
 .navbar-header button.navbar-toggle, .navbar-header .icon-bar {
   border: 1px solid #000000;
-  background-color: var(--main-color);
+  background: var(--main-bg);
 }
 .navbar-header button.navbar-toggle {
   clear: both;
@@ -75,10 +75,10 @@ body{
 }
 
 .navbar-header button.navbar-toggle:focus{
-	background: var(--main-color);
+	background: var(--main-bg);
 }
 .navbar-header button.navbar-toggle:hover, .navbar-header span:hover, #nav-list a:hover{
-	background-color: #000000; 
+	background: #000000; 
 	color: #00FF00;
 	border: 1px solid #00FF00;
 }
@@ -90,7 +90,7 @@ body{
 }
 .main_content{
 	width: 98%;
-	background-color:var(--main-color);
+	background:var(--main-bg);
 	margin:20px 1% 20px 1%;
 	padding:15px;
 

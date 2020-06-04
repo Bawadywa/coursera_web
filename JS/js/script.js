@@ -8,4 +8,5 @@ function change_color(){
 	color = random_num().toString(16) + random_num().toString(16) + random_num().toString(16);
 	body[0].style.background = "#"+color;
 }
+
 body[0]["onclick"] = change_color;

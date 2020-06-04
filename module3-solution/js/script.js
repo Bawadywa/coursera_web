@@ -1,9 +1,6 @@
 var a_list = document.querySelectorAll("a[href='#']");
-console.log(a_list);
 var span_list = document.querySelectorAll("span[class='icon-bar']");
 var button = document.getElementsByTagName('button');
-console.log(span_list);
-console.log(button);
 var class_bonds = "bonds", class_button = "button", class_span = "span";
 
 function mouse_over_construct(index, flag){

@@ -1,14 +1,11 @@
-function Operation(num){
-	this.num = num;
-}
-Operation.prototype.square = function() {
-	return Math.pow(this.num, 2);
-};
-Operation.prototype.square_root = function(){
-	return Math.pow(this.num, 0.5);
+var body = document.getElementsByTagName("body");
 
-};
-var num_1 = new Operation(4);
-console.log(num_1);
-console.log(num_1.square())
-console.log(num_1.square_root())
+function random_num(){
+	return Math.floor(Math.random() * 255);
+}
+
+function change_color(){
+	color = random_num().toString(16) + random_num().toString(16) + random_num().toString(16);
+	body[0].style.background = "#"+color;
+}
+body[0]["onclick"] = change_color;

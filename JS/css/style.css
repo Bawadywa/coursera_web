@@ -1,6 +1,9 @@
 *{
 	box-sizing: border-box;
 }
+body{
+	height: 1000px;
+}
 h1{
 	text-align: center;
 }

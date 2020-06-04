@@ -19,8 +19,10 @@ body{
 	border:0;
 	border-bottom: 2px solid #000000;
 }
-.navbar-header{
+#header-nav .navbar-header{
 	height: 80px;
+	margin-right: 0px;
+	margin-left: 0px;
 }
 .container-style{
 	width:100%;
@@ -40,7 +42,7 @@ body{
 	text-shadow: 2px 2px 2px #222;
 	margin-top: 0px;
 	margin-bottom: 0px;
-	padding-left: 40px;
+	margin-left: 30px;
 }
 .navbar-brand a:hover, .navbar-brand a:focus{
 	text-decoration: none;
@@ -73,7 +75,7 @@ body{
 .navbar-header button.navbar-toggle {
   clear: both;
   margin-top:-10px;
-  margin-right:25px;
+  /*margin-right:25px;*/
 }
 
 .navbar-header button.navbar-toggle:focus{
@@ -134,6 +136,9 @@ body{
 	.main_content{
 	width: 70%;
 	margin:20px 15% 20px 15%;
+	}
+	.navbar-brand h1{
+	margin-left: 20px;
 	}
 
 }

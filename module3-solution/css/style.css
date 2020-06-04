@@ -52,17 +52,17 @@ body{
 	margin-left:  0px;
 	overflow: hidden;
 }
-.button{
-	margin-right:25px;
-}
 #nav-list{
 	overflow: hidden;
 	margin-top: 15px;
 }
 #nav-list a{
-	color: #000000;
 	text-align: center;
 	font-size: 1.5em;
+}
+
+#nav-list .menu-item{
+	color: #000000;
 	border: 1px solid transparent;
 }
 
@@ -73,6 +73,7 @@ body{
 .navbar-header button.navbar-toggle {
   clear: both;
   margin-top:-10px;
+  margin-right:25px;
 }
 
 .navbar-header button.navbar-toggle:focus{
@@ -83,10 +84,23 @@ body{
 	color: #00FF00;
 	border: 1px solid #00FF00;
 }
-.bonds{
+
+#nav-list .bonds{
 	background: #000000; 
 	color: #00FF00;
 	border: 1px solid #00FF00;
+}
+
+#header-nav .button{
+	background: #000000; 
+	color: #00FF00;
+	border: 1px solid #00FF00;
+}
+#spans .span{
+	background: #000000; 
+	color: #00FF00;
+	border: 1px solid #00FF00;
+
 }
 
 

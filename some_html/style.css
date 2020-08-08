@@ -53,7 +53,7 @@ body {
 	padding:4px;
 }
 
-.btn {
+a {
 	display: block;
 	position: absolute;
 	background: radial-gradient(#880088, #00D0FF);

@@ -53,11 +53,10 @@ body {
 	padding:4px;
 }
 
-a {
+.btn {
 	display: block;
 	position: absolute;
-	/*background: radial-gradient(#880088, #00D0FF);*/
-	background-color: #00FF00;
+	background: radial-gradient(#880088, #00D0FF);
 	width: 60%;
 	margin: 0px 20% 0px 20%;
 	text-align: center;

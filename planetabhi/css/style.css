@@ -6,10 +6,15 @@
 
 
 /* Font */
-@font-face { 
-  font-family: 'Coco'; 
-  src:  url("Coco-Regular.otf") format("opentype");
+@font-face {
+	font-family: 'Coco';
+	src: url('../fonts/Coco-Regular.eot');
+	src: local('☺'), url('../fonts/Coco-Regular.woff') format('woff'), url('../fonts/Coco-Regular.ttf') format('truetype'), url('../fonts/Coco-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
+
+
 /* Body */
 body {
 	background: #FFFFFF;
@@ -111,8 +116,49 @@ header {
 	height: 421px;
 	position: relative;
 	background: url(../images/slider_1.jpg) no-repeat;
-
 }
+
+.btns {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	display: flex;
+	text-align: center;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.btn {
+	font-size: 45px;
+	width: 6%;
+	height: 140px;
+	transform: translate(0, -60%);
+	color: #222;
+	background-color: #808080;
+	opacity: 0.3;
+	border: none;
+	border-radius: 10px;
+	transition: width .3s linear;
+	display: none;
+}
+
+.btn:hover {
+	opacity: 0.7;
+	width: 7%;
+	background-color: #A0A0A0;
+	color:#FFF;
+}
+
+.btn:focus {
+	outline: none;
+}
+
+.btn_active {
+	display: inline-block;
+}
+
+
+
 
 /* Title */
 .title__part {

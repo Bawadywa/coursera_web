@@ -28,31 +28,52 @@ function mouse_construct(flag){
 }
 
 function change_bg_construct(flag){
-	var block = document.getElementsByClassName("slider__inner")[0];
+	var block = document.getElementsByClassName("slider")[0];
 	block.style.repeat = "no-repeat";
 	block.onmouseover = mouse_construct(true);
 	block.onmouseout = mouse_construct(false);
 	var index = 0;
 
+	function smooth_change(){
+		function change(){
+				block.style.background = bgs[index];
+				block.style.opacity = 1;
+			}
+
+			var id = setInterval(frame, 15);
+			var opacity = 1.0;
+			function frame(){
+				if (opacity == 0){
+					clearInterval(id);
+					change();
+				}
+				else {
+					opacity -= 0.05;
+					opacity = opacity.toFixed(2);
+					block.style.opacity = opacity;
+				}
+			}
+	}
+
 
 	if (flag){
 		return function change_bg(event){
 			if (index <= 1) {
-			index+=1
-			block.style.background = bgs[index];
+				index+=1;
 			}else if(index==2){
-			index=0;
-			block.style.background = bgs[index];
+				index=0;
 			}
+			smooth_change();
+			
 	}}else{
 		return function change_bg(event){
 			if (index >= 1) {
-			index-=1;
-			block.style.background = bgs[index];
+				index-=1;
 			}else if(index==0){
-			index=2;
-			block.style.background = bgs[index];
-		}
+				index=2;
+			}
+			smooth_change();
+
 		}
 	}
 		

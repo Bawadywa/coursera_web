@@ -107,15 +107,16 @@ header {
 
 
 /* Slider */
-.slider {
+.slider__outer {
 	width: 100%;
 	margin-bottom: 50px;
 }
 
-.slider__inner {
+.slider {
 	height: 421px;
 	position: relative;
 	background: url(../images/slider_1.jpg) no-repeat;
+	opacity: 1;
 }
 
 .btns {

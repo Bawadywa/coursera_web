@@ -28,16 +28,17 @@ function mouse_construct(flag){
 }
 
 function change_bg_construct(flag){
-	var block = document.getElementsByClassName("slider")[0];
-	block.style.repeat = "no-repeat";
+	var slider = document.getElementsByClassName("slider__inner")[0];
+	slider.style.repeat = "no-repeat";
+	var block = document.getElementsByClassName("slider")[0]
 	block.onmouseover = mouse_construct(true);
 	block.onmouseout = mouse_construct(false);
 	var index = 0;
 
 	function smooth_change(){
 		function change(){
-				block.style.background = bgs[index];
-				block.style.opacity = 1;
+				slider.style.background = bgs[index];
+				slider.style.opacity = 1;
 			}
 
 			var id = setInterval(frame, 15);
@@ -50,7 +51,7 @@ function change_bg_construct(flag){
 				else {
 					opacity -= 0.05;
 					opacity = opacity.toFixed(2);
-					block.style.opacity = opacity;
+					slider.style.opacity = opacity;
 				}
 			}
 	}

@@ -1,13 +1,61 @@
 var btn_prev = document.getElementById("btn_prev"), 
 	btn_next = document.getElementById("btn_next");
 
+var menu = document.getElementById("menu"),
+	nav_list = document.getElementsByClassName("nav_list")[0],
+	lines = document.getElementsByClassName("menu_line");
+
+function menu_click(event) {
+	nav_list.classList.add("active");
+
+	function change() {
+		for (var i = 0; i < lines.length; i++) {
+		lines[i].classList.toggle("line_rotate");
+		}
+	
+	nav_list.classList.toggle("menu_active");
+	}
+
+	setTimeout(change, 10);
+	
+}
+
+menu.onclick = menu_click;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var btn_class = "btn_active";
 
 var numbers = [1, 2, 3];
-var urls = [], bgs = [];
+var srcs = [];
 for (var i = 0; i < numbers.length; i++) {
-	urls[i] = "./images/slider_" + numbers[i] + ".jpg";
-	bgs[i] = "url(" + urls[i] + ")";
+	srcs[i] = "./images/slider_" + numbers[i] + ".jpg";
 }
 
 function mouse_construct(flag){
@@ -29,15 +77,15 @@ function mouse_construct(flag){
 
 function change_bg_construct(flag){
 	var slider = document.getElementsByClassName("slider__inner")[0];
-	slider.style.repeat = "no-repeat";
-	var block = document.getElementsByClassName("slider")[0]
+	var slider_img = document.getElementById("slider");
+	var block = document.getElementsByClassName("slider")[0];
 	block.onmouseover = mouse_construct(true);
 	block.onmouseout = mouse_construct(false);
 	var index = 0;
 
 	function smooth_change(){
 		function change(){
-				slider.style.background = bgs[index];
+				slider_img.src = srcs[index];
 				slider.style.opacity = 1;
 			}
 
@@ -80,5 +128,9 @@ function change_bg_construct(flag){
 		
 }
 
+
 btn_prev.onclick = change_bg_construct(false);
 btn_next.onclick = change_bg_construct(true);
+
+
+

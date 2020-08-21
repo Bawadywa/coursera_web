@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
 	<title>Planetabhi</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,
+	maximum-scale=1.0, user-scalable=0">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
 	<script src="https://use.fontawesome.com/002940ac35.js"></script>
 </head>
 <body>
@@ -13,7 +15,12 @@
 			<div class="header__inner">
 			<a href="#" class="logo">planetabhi</a>
 			<nav class="header__nav">
-				<ul class="nav-list">
+				<div id="menu">
+					<span class="menu_line"></span>
+					<span class="menu_line"></span>
+					<span class="menu_line"></span>
+				</div>
+				<ul class="nav_list">
 					<li><a href="#">home</a></li>
 					<li><a href="#">blog</a></li>
 					<li><a href="#">looks</a></li>
@@ -30,10 +37,12 @@
 	<div class="container">
 			<div class="slider">
 			<a href="#" class="read_btn">
-				<img src="images/read_more_btn_new.png" width="133" height="135" alt="">
+				<img  id="read_btn" src="images/read_more_btn_new.png" width="133" height="135" alt="">
 				<span class="read_more_text">Read More</span>
 			</a>
-			<div class="slider__inner"></div>
+			<div class="slider__inner">
+				<img  id="slider" src="images/slider_1.jpg" width="960" height="420" alt="">
+			</div>
 			<div class="title__part">
 				<h1 class="title">Anar Uynam Ihba</h1>
 				<span class="desc">
@@ -126,7 +135,7 @@
 			<span class="footer__line"></span>
 			<div class="footer__up">
 				<nav class="footer_nav">
-				<ul class="nav-list">
+				<ul class="nav_list">
 					<li><a href="#">home</a></li>
 					<li><a href="#">blog</a></li>
 					<li><a href="#">about</a></li>
@@ -136,7 +145,7 @@
 				<div class="copyright">&copy;Copyright <b>Abhimanuy Rana</b>,2012</div>
 			</div>
 			<div class="footer__down">
-				<ul class="logos">
+				<ul class="social">
 					<li><a href="#" target="_blank" id="facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
 					<li><a href="#" target="_blank" id="twitter"><i class="fa fa-twitter"></i></a></li>
 					<li><a href="#" target="_blank" id="youtube"><i class="fa fa-youtube"></i></a></li>

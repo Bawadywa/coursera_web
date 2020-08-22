@@ -1,3 +1,4 @@
+var block = document.getElementsByClassName("slider")[0];
 var btn_prev = document.getElementById("btn_prev"), 
 	btn_next = document.getElementById("btn_next");
 
@@ -5,23 +6,36 @@ var menu = document.getElementById("menu"),
 	nav_list = document.getElementsByClassName("nav_list")[0],
 	lines = document.getElementsByClassName("menu_line");
 
-function menu_click(event) {
-	nav_list.classList.add("active");
+var slider_turn = document.getElementsByClassName("slider__turn")[0];
 
-	function change() {
-		for (var i = 0; i < lines.length; i++) {
+var header = document.getElementsByTagName("header")[0];
+
+function menu_click(event) {
+	for (var i = 0; i < lines.length; i++) {
 		lines[i].classList.toggle("line_rotate");
-		}
-	
-	nav_list.classList.toggle("menu_active");
 	}
 
-	setTimeout(change, 10);
-	
+	nav_list.classList.toggle("menu_active");
+
+}
+
+function menu_out(event){
+	for (var i = 0; i < lines.length; i++) {
+		lines[i].classList.remove("line_rotate");
+	}
+	nav_list.classList.remove("menu_active");
+
 }
 
 menu.onclick = menu_click;
+menu.onmouseout = menu_out;
 
+
+function slider__turn_click(event){
+	slider_turn.classList.add("off");
+}
+
+slider_turn.onclick = slider__turn_click;
 
 
 
@@ -63,12 +77,17 @@ function mouse_construct(flag){
 		return function mouse_over(event){
 			btn_prev.classList.add(btn_class);
 			btn_next.classList.add(btn_class);
+			header.classList.add("header__off");
+			block.classList.add("slider__outline");
+
 		}
 
 	}else {
 		return function mouse_out(event){
 			btn_prev.classList.remove(btn_class);
 			btn_next.classList.remove(btn_class);
+			header.classList.remove("header__off");
+			block.classList.remove("slider__outline");
 		}
 
 	}
@@ -78,7 +97,6 @@ function mouse_construct(flag){
 function change_bg_construct(flag){
 	var slider = document.getElementsByClassName("slider__inner")[0];
 	var slider_img = document.getElementById("slider");
-	var block = document.getElementsByClassName("slider")[0];
 	block.onmouseover = mouse_construct(true);
 	block.onmouseout = mouse_construct(false);
 	var index = 0;

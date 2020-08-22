@@ -46,33 +46,40 @@ var anchors = Array.from(nav_lists[0].querySelectorAll('a'))
 
 function scrollTo(element, offset=0){
 	var scrolled = window.pageYOffset,
-	distance = element.offsetTop - offset,step = 0,timer, check_scrolled;
+	distance = element.offsetTop - offset, step = 0, timer, check_scrolled,
+	check_step;
 
 	if (scrolled < distance){
-			step = 7;
+			step = 10;
 	}else if(scrolled > distance){
-			step = -7;
+			step = -10;
 	}
 
 	function scroll(){
 		scrolled = window.pageYOffset;
-		window.scrollBy(0, step);
 
 		if (Math.abs(scrolled - distance) <= 15){
 			if (scrolled < distance){
-			step = 1;
+				step = 1;
 			}else if(scrolled > distance){
-			step = -1;
+				step = -1;
 			}
 		}
 
-		if ((scrolled === distance) || (scrolled === check_scrolled)) {
+
+		window.scrollBy(0, step);
+
+		
+		if ((scrolled === distance) || (scrolled === check_scrolled)
+			||(step + check_step === 0)) {
 			clearTimeout(timer);
 			return
 		}
-
-		timer = setTimeout(scroll, 7);
 		check_scrolled = scrolled;
+		check_step = step;
+
+		timer = setTimeout(scroll, 1);
+		
 
 	}
 

@@ -10,6 +10,7 @@
 	<script src="https://use.fontawesome.com/002940ac35.js"></script>
 </head>
 <body>
+	<div id="home"></div>
 	<header>
 		<div class="container">
 			<div class="header__inner">
@@ -21,13 +22,13 @@
 			</div>
 			<nav class="header__nav">
 				<ul class="nav_list">
-					<li><a href="#">home</a></li>
-					<li><a href="#">blog</a></li>
-					<li><a href="#">looks</a></li>
-					<li><a href="#">items</a></li>
-					<li><a href="#">trends</a></li>
+					<li><a href="#home">home</a></li>
+					<li><a href="#blog">blog</a></li>
+					<li><a href="#looks">looks</a></li>
+					<li><a href="#items">items</a></li>
+					<li><a href="#trends">trends</a></li>
 					<li><a href="#">about</a></li>
-					<li><a href="#">contact</a></li>
+					<li><a href="#contact">contact</a></li>
 				</ul>
 			</nav>
 			</div>
@@ -63,21 +64,21 @@
 			<div class="section__inner">
 			<div class="row">
 				<div class="col">
-				<div class="item">
+				<div id="looks" class="item">
 					<img src="images/looks.png" alt="" width="11" height="25">
 					<h2 class="item__title">Looks</h2>
 					<p class="item__desc">Maecenas eu placerat ante. Fusce ut neque justo, et aliquet enim. In hac habitasse platea dictumst. Nullam commodo neque erat, vitae facilisis erat.</p>
 				</div>
 				</div>	
 				<div class="col">
-				<div class="item">
+				<div id="items" class="item">
 					<img src="images/items.png" alt="" width="24" height="25">
 					<h2 class="item__title">Items</h2>
 					<p class="item__desc">Maecenas eu placerat ante. Fusce ut neque justo, et aliquet enim. In hac habitasse platea dictumst. Nullam commodo neque erat, vitae facilisis erat.</p>
 				</div>
 				</div>
 				<div class="col">
-				<div class="item">
+				<div id="trends" class="item">
 					<img src="images/trends.png" alt="" width="26" height="25">
 					<h2 class="item__title">Trends</h2>
 					<p class="item__desc">Maecenas eu placerat ante. Fusce ut neque justo, et aliquet enim. In hac habitasse platea dictumst. Nullam commodo neque erat, vitae facilisis erat.</p>
@@ -89,12 +90,12 @@
 	</section>
 	<section>
 		<div class="container">
-			<div class="section__title__block">
+			<div id="blog" class="section__title__block">
 				<span class="line"></span>
 				<h2 class="section__title">Latest Blog Posts</h2>
 				<span class="line"></span>
 			</div>
-			<div class="section__inner">
+			<div  class="section__inner">
 				<div class="row">
 					<div class="col">
 					<div class="post">
@@ -134,16 +135,16 @@
 		</div>
 	</section>
 
-	<footer>
+	<footer id="contact">
 		<div class="container">
 			<span class="footer__line"></span>
 			<div class="footer__up">
 				<nav class="footer_nav">
 				<ul class="nav_list">
-					<li><a href="#">home</a></li>
-					<li><a href="#">blog</a></li>
+					<li><a href="#home">home</a></li>
+					<li><a href="#blog">blog</a></li>
 					<li><a href="#">about</a></li>
-					<li><a href="#">contact</a></li>
+					<li><a href="#contact">contact</a></li>
 				</ul>
 				</nav>
 				<div class="copyright">&copy;Copyright <b>Abhimanuy Rana</b>,2012</div>

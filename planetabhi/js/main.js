@@ -38,8 +38,70 @@ function slider__turn_click(event){
 slider_turn.onclick = slider__turn_click;
 
 
+var nav_lists = document.getElementsByClassName('nav_list');
+var anchors = Array.from(nav_lists[0].querySelectorAll('a'))
+.concat(Array.from(nav_lists[1].querySelectorAll('a')));
 
 
+
+function scrollTo(element, offset=0){
+	var scrolled = window.pageYOffset,
+	distance = element.offsetTop - offset,step = 0,timer, check_scrolled;
+
+	if (scrolled < distance){
+			step = 7;
+	}else if(scrolled > distance){
+			step = -7;
+	}
+
+	function scroll(){
+		scrolled = window.pageYOffset;
+		window.scrollBy(0, step);
+
+		if (Math.abs(scrolled - distance) <= 15){
+			if (scrolled < distance){
+			step = 1;
+			}else if(scrolled > distance){
+			step = -1;
+			}
+		}
+
+		if ((scrolled === distance) || (scrolled === check_scrolled)) {
+			clearTimeout(timer);
+			return
+		}
+
+		timer = setTimeout(scroll, 7);
+		check_scrolled = scrolled;
+
+	}
+
+	scroll();
+	
+}
+
+function anchor_click_construct(anchor, offset){
+	return function(event){
+		event.preventDefault();
+		var element = document.querySelector(""+anchor.getAttribute("href"));
+		scrollTo(element, offset);
+	}
+}
+
+
+for (var i = 0; i < anchors.length; i++){
+
+	if(anchors[i].getAttribute('href') === "#"){
+		continue;
+	}
+	var offset = 85;
+
+	if ((i === 0) || (i === anchors.length - 1)){
+		offset = 0;
+	}
+
+	anchors[i].onclick = anchor_click_construct(anchors[i], offset);
+}
 
 
 

@@ -14,7 +14,6 @@
 	font-style: normal;
 }
 
-
 /* Body */
 body {
 	background: #FFFFFF;
@@ -32,6 +31,13 @@ h2 {
 }
 
 /* Header */
+
+#home {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
 header {
 	width: 100%;
 	margin-top: 20px;
@@ -659,6 +665,10 @@ footer {
 	.btn:hover{
 		font-size: 45px;
 		width: 10%;
+	}
+
+	.item__title {
+		margin-top: 10px;
 	}
 }
 

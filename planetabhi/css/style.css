@@ -418,12 +418,17 @@ footer {
 	margin-bottom: 10px;
 }
 
-.copyright {
+.copyright_up {
 	font-size: 12px;
 	font-weight: 500;
 }
 
+.copyright_down {
+		display: none;
+}
+
 .footer__down {
+	position: relative;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -585,22 +590,35 @@ footer {
 	/* Social */
 	.social li > a {
 		font-size: 25px;
+		color: #FFF;
+		line-height: 40px;
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	.social li {
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		box-shadow: 0px 0px 5px #000;
+		border: 1px solid #000;
+		margin-right: 5px;
 	}
 
 	#facebook{
-		color: #3B5998;
+		background-color: #3B5998;
 	}
 
 	#twitter {
-		color: #00ACEE;
+		background-color: #00ACEE;
 	}
 
 	#youtube {
-		color: #E62117;
+		background-color: #E62117;
 	}
 
 	#rss {
-		color: #EE802f;
+		background-color: #EE802f;
 	}
 
 	.btn {
@@ -610,6 +628,22 @@ footer {
 	.btn:hover {
 		font-size: 60px;
 		opacity: 0.8;
+	}
+
+	.copyright_up {
+		display: none;
+	}
+
+	.copyright_down {
+		display: block;
+		position: absolute;
+		right: 0;
+		bottom: -20px;
+		text-align: center;
+	}
+
+	.footer__line {
+		margin-bottom: 5px;
 	}
 
 }

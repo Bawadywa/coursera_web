@@ -504,8 +504,7 @@ footer {
 	}
 
 	.header__inner {
-		margin-top: -2px;
-		margin-bottom: -1px;
+		margin-bottom: -3px;
 	}
 
 	.logo {
@@ -586,6 +585,22 @@ footer {
 	/* Social */
 	.social li > a {
 		font-size: 25px;
+	}
+
+	#facebook{
+		color: #3B5998;
+	}
+
+	#twitter {
+		color: #00ACEE;
+	}
+
+	#youtube {
+		color: #E62117;
+	}
+
+	#rss {
+		color: #EE802f;
 	}
 
 	.btn {

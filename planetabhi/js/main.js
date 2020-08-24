@@ -1,3 +1,6 @@
+(function(){
+document.addEventListener("touchstart", function(){}, true);
+
 var block = document.getElementsByClassName("slider")[0];
 var btn_prev = document.getElementById("btn_prev"), 
 	btn_next = document.getElementById("btn_next");
@@ -10,25 +13,45 @@ var slider_turn = document.getElementsByClassName("slider__turn")[0];
 
 var header = document.getElementsByTagName("header")[0];
 
+nav_list.classList.add("menu_off");
+for (var i = 0; i < lines.length; i++) {
+		lines[i].classList.add("line_rotate_off");
+}
+
+
 function menu_click(event) {
-	for (var i = 0; i < lines.length; i++) {
-		lines[i].classList.toggle("line_rotate");
+	if (nav_list.classList.contains("menu_off") === true){
+		for (var i = 0; i < lines.length; i++) {
+				lines[i].classList.remove("line_rotate_off");
+				lines[i].classList.add("line_rotate_on");
+			}
+			nav_list.classList.remove("menu_off");
+			nav_list.classList.add("menu_on");
+	}else if(nav_list.classList.contains("menu_on") === true){
+		for (var i = 0; i < lines.length; i++) {
+				lines[i].classList.remove("line_rotate_on");
+				lines[i].classList.add("line_rotate_off");
+			}
+			nav_list.classList.remove("menu_on");
+			nav_list.classList.add("menu_off");
 	}
-
-	nav_list.classList.toggle("menu_active");
-
 }
 
-function menu_out(event){
-	for (var i = 0; i < lines.length; i++) {
-		lines[i].classList.remove("line_rotate");
+function menu_leave(event){
+	if(nav_list.classList.contains("menu_on") === true){
+		for (var i = 0; i < lines.length; i++) {
+				lines[i].classList.remove("line_rotate_on");
+				lines[i].classList.add("line_rotate_off");
+				}
+			nav_list.classList.remove("menu_on");
+			nav_list.classList.add("menu_off");
+		}
 	}
-	nav_list.classList.remove("menu_active");
 
-}
+
 
 menu.onclick = menu_click;
-menu.onmouseout = menu_out;
+menu.onmouseleave = menu_leave;
 
 
 function slider__turn_click(event){
@@ -95,41 +118,28 @@ function anchor_click_construct(anchor, offset){
 	}
 }
 
+var initial_offset, offset;
+var width = document.documentElement.clientWidth;
+if(width <= 820){
+	initial_offset = 85;
+}else {
+	initial_offset = 40
+}
 
 for (var i = 0; i < anchors.length; i++){
 
 	if(anchors[i].getAttribute('href') === "#"){
 		continue;
 	}
-	var offset = 85;
 
 	if ((i === 0) || (i === anchors.length - 1)){
 		offset = 0;
+	}else{
+		offset = initial_offset
 	}
 
 	anchors[i].onclick = anchor_click_construct(anchors[i], offset);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -143,7 +153,7 @@ for (var i = 0; i < numbers.length; i++) {
 
 function mouse_construct(flag){
 	if (flag){
-		return function mouse_over(event){
+		return function mouse_in(event){
 			btn_prev.classList.add(btn_class);
 			btn_next.classList.add(btn_class);
 			header.classList.add("header__off");
@@ -166,47 +176,47 @@ function mouse_construct(flag){
 function change_bg_construct(flag){
 	var slider = document.getElementsByClassName("slider__inner")[0];
 	var slider_img = document.getElementById("slider");
-	block.onmouseover = mouse_construct(true);
-	block.onmouseout = mouse_construct(false);
-	var index = 0;
+	block.onmouseenter = mouse_construct(true);
+	block.onmouseleave = mouse_construct(false);
+	this.slider_index = 0;
 
 	function smooth_change(){
 		function change(){
-				slider_img.src = srcs[index];
+				slider_img.src = srcs[slider_index];
 				slider.style.opacity = 1;
 			}
 
 			var id = setInterval(frame, 15);
 			var opacity = 1.0;
 			function frame(){
-				if (opacity == 0){
+				if (opacity < 0){
 					clearInterval(id);
 					change();
 				}
 				else {
+					slider.style.opacity = opacity;
 					opacity -= 0.05;
 					opacity = opacity.toFixed(2);
-					slider.style.opacity = opacity;
 				}
 			}
 	}
 
 
 	if (flag){
-		return function change_bg(event){
-			if (index <= 1) {
-				index+=1;
-			}else if(index==2){
-				index=0;
+		return function next(event){
+			if(slider_index <= 1){
+				slider_index +=1;
+			}else{
+				slider_index = 0;
 			}
 			smooth_change();
-			
-	}}else{
-		return function change_bg(event){
-			if (index >= 1) {
-				index-=1;
-			}else if(index==0){
-				index=2;
+			}
+	}else{
+		return function prev(event){
+			if(slider_index >= 1){
+				slider_index -=1;
+			}else{
+				slider_index = 2;
 			}
 			smooth_change();
 
@@ -215,9 +225,8 @@ function change_bg_construct(flag){
 		
 }
 
-
 btn_prev.onclick = change_bg_construct(false);
 btn_next.onclick = change_bg_construct(true);
-
+})();
 
 

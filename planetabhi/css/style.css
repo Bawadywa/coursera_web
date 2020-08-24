@@ -130,7 +130,7 @@ header {
 	top: 65px;
 }
 .menu_off {
-	top: -55%;
+	top: -65%;
 }
 
 .menu_line {
@@ -142,7 +142,7 @@ header {
 }
 
 .menu_line:first-child {
-	margin-top: 13px;
+	margin-top: 12px;
 }
 
 .line_rotate_on{
@@ -152,7 +152,7 @@ header {
 
 .line_rotate_off{
 	transform: none;
-	margin: 8px 0;
+	margin: 9px 0;
 }
 
 /* Slider */
@@ -527,7 +527,7 @@ footer {
 		display: block;
 		transition: top .4s linear;
 		background-color: #FFF;
-		padding-top: 10px;
+		padding-top: 5px;
 	}
 
 	.nav_list li > a {

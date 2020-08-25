@@ -1,5 +1,4 @@
 (function(){
-document.addEventListener("touchstart", function(){}, true);
 
 var block = document.getElementsByClassName("slider")[0];
 var btn_prev = document.getElementById("btn_prev"), 
@@ -13,11 +12,9 @@ var slider_turn = document.getElementsByClassName("slider__turn")[0];
 
 var header = document.getElementsByTagName("header")[0];
 
-nav_list.classList.add("menu_off");
 for (var i = 0; i < lines.length; i++) {
 		lines[i].classList.add("line_rotate_off");
 }
-
 
 function menu_click(event) {
 	if (nav_list.classList.contains("menu_off") === true){
@@ -142,7 +139,6 @@ for (var i = 0; i < anchors.length; i++){
 }
 
 
-
 var btn_class = "btn_active";
 
 var numbers = [1, 2, 3];
@@ -175,50 +171,78 @@ function mouse_construct(flag){
 
 function change_bg_construct(flag){
 	var slider = document.getElementsByClassName("slider__inner")[0];
-	var slider_img = document.getElementById("slider");
+	var slider_imgs = document.getElementsByClassName("slider_img");
+	var class_on = 'slider_on',
+		class_left = 'slider_off_left',
+		class_right = 'slider_off_right';
+
 	block.onmouseenter = mouse_construct(true);
 	block.onmouseleave = mouse_construct(false);
 	this.slider_index = 0;
+	this.prev_index = 0;
 
-	function smooth_change(){
-		function change(){
-				slider_img.src = srcs[slider_index];
-				slider.style.opacity = 1;
-			}
+	function smooth_change(direction, flag){
+		function change(direction, flag){
 
-			var id = setInterval(frame, 15);
-			var opacity = 1.0;
-			function frame(){
-				if (opacity < 0){
-					clearInterval(id);
-					change();
+			if (flag===true){
+				for(var i = 0; i < slider_imgs.length; i++){
+					if(i === prev_index){
+						slider_imgs[i].classList.add(direction);
+						slider_imgs[i].classList.remove(class_on);
+					}else if(i === slider_index){
+						slider_imgs[i].classList.add(class_on);
+						slider_imgs[i].classList.remove(class_right);
+						slider_imgs[i].classList.remove(class_left);
+					}else {
+						slider_imgs[i].classList.remove(class_on);
+						slider_imgs[i].classList.remove(class_left);
+						slider_imgs[i].classList.add(class_right);
+					}
 				}
-				else {
-					slider.style.opacity = opacity;
-					opacity -= 0.05;
-					opacity = opacity.toFixed(2);
+			}else{
+				for(var i = 0; i < slider_imgs.length; i++){
+					if(i === prev_index){
+						slider_imgs[i].classList.add(direction);
+						slider_imgs[i].classList.remove(class_on);
+					}else if(i === slider_index){
+						slider_imgs[i].classList.add(class_on);
+						slider_imgs[i].classList.remove(class_right);
+						slider_imgs[i].classList.remove(class_left);
+					}else {
+						slider_imgs[i].classList.remove(class_on);
+						slider_imgs[i].classList.remove(class_right);
+						slider_imgs[i].classList.add(class_left);
+					}
 				}
+
+				
 			}
+			}
+			change(direction, flag);
 	}
 
 
 	if (flag){
 		return function next(event){
 			if(slider_index <= 1){
+				prev_index = slider_index;
 				slider_index +=1;
 			}else{
+				prev_index = slider_index;
 				slider_index = 0;
 			}
-			smooth_change();
+			smooth_change(class_left, true);
 			}
 	}else{
 		return function prev(event){
 			if(slider_index >= 1){
+				prev_index = slider_index;
 				slider_index -=1;
 			}else{
+				prev_index = slider_index;
 				slider_index = 2;
 			}
-			smooth_change();
+			smooth_change(class_right, false);
 
 		}
 	}

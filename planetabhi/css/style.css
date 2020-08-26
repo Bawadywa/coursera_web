@@ -207,16 +207,23 @@ header {
 .slider_off_right {
 	right: -100%;
 	opacity: 0;
+	display: block;
 }
 
 .slider_off_left {
 	right: 100%;
 	opacity: 0;
+	display: block;
 }
 
 .slider_on {
 	right: 0;
 	opacity: 1;
+	display: block;
+}
+
+.slider_off {
+	display: none;
 }
 
 /* Buttons */

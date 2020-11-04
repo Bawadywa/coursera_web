@@ -1,0 +1,93 @@
+@font-face {
+	font-family: "MyriadPro";
+	src: url("../fonts/MyriadPro-Bold.eot") format("eot"),
+		 url("../fonts/MyriadPro-Bold.ttf") format("ttf"),
+		 url("../fonts/MyriadPro-Bold.woff") format("woff"),
+		 url("../fonts/MyriadPro-Bold.woff2") format("woff2");
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "MyriadPro";
+	src: url("../fonts/MyriadPro-Cond.eot") format("eot"),
+		 url("../fonts/MyriadPro-Cond.ttf") format("ttf"),
+		 url("../fonts/MyriadPro-Cond.woff") format("woff"),
+		 url("../fonts/MyriadPro-Cond.woff2") format("woff2");
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "MyriadPro";
+	src: url("../fonts/MyriadPro-Regular.eot") format("eot"),
+		 url("../fonts/MyriadPro-Regular.ttf") format("ttf"),
+		 url("../fonts/MyriadPro-Regular.woff") format("woff"),
+		 url("../fonts/MyriadPro-Regular.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Quicksand-Regular";
+	src: url("../fonts/Quicksand-Regular.eot") format("eot"),
+		 url("../fonts/Quicksand-Regular.ttf") format("ttf"),
+		 url("../fonts/Quicksand-Regular.woff") format("woff"),
+		 url("../fonts/Quicksand-Regular.woff2") format("woff2");
+	font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Rokkitt';
+    src: url('../fonts/Rokkitt-Medium.eot') format('eot'),
+        url('../fonts/Rokkitt-Medium.woff2') format('woff2'),
+        url('../fonts/Rokkitt-Medium.woff') format('woff'),
+        url('../fonts/Rokkitt-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rokkitt';
+    src: url('../fonts/Rokkitt-ExtraLight.eot') format('eot'),
+        url('../fonts/Rokkitt-ExtraLight.woff2') format('woff2'),
+        url('../fonts/Rokkitt-ExtraLight.woff') format('woff'),
+        url('../fonts/Rokkitt-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rokkitt';
+    src: url('../fonts/Rokkitt-Light.eot') format('eot'),
+        url('../fonts/Rokkitt-Light.woff2') format('woff2'),
+        url('../fonts/Rokkitt-Light.woff') format('woff'),
+        url('../fonts/Rokkitt-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rokkitt';
+    src: url('../fonts/Rokkitt-Regular.eot') format('eot'),
+        url('../fonts/Rokkitt-Regular.woff2') format('woff2'),
+        url('../fonts/Rokkitt-Regular.woff') format('woff'),
+        url('../fonts/Rokkitt-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rokkitt';
+    src: url('../fonts/Rokkitt-Thin.eot') format('eot'),
+        url('../fonts/Rokkitt-Thin.woff2') format('woff2'),
+        url('../fonts/Rokkitt-Thin.woff') format('woff'),
+        url('../fonts/Rokkitt-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+
+
+
+

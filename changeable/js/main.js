@@ -1,4 +1,4 @@
-var INDEX = 0, FLAG = true;
+var INDEX = 0, FLAG = true, form_style = "form_style";
 
 function change(){
 	change_header();
@@ -12,28 +12,20 @@ function change(){
 }
 
 function run_change(event){
-	if(FLAG)
-	{
+	if((event.target.classList[1] !== form_style) & (FLAG)){
+		FLAG = false
 		if(INDEX < 2){
 			INDEX += 1;
 		}else{
 			INDEX = 0;
 		}
+
+		setTimeout(function() {
+			FLAG = true;
+		}, 500);
+
 		change();
 	}
 }
 
 body.addEventListener("click", run_change);
-
-function check_enter(event){
-	FLAG = false;
-}
-
-function check_leave(event){
-	FLAG = true;
-}
-
-contact_form.addEventListener("mouseenter", check_enter);
-contact_form.addEventListener("mouseleave", check_leave);
-
-

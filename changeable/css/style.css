@@ -85,6 +85,7 @@ img {
 	position: absolute;
 	top: 0;
 	left: 0;
+	background-repeat: no-repeat;
 	transition-property: background;
 	transition-delay: .01s;
 	transition-duration: .4s;
@@ -257,22 +258,27 @@ img {
 
 .row {
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+}
+
+.skills .row {
+	margin: 0 -50px;
 }
 
 .col {
-	flex-grow: 0;
+	flex-shrink: 0;
+	flex-grow: 1;
 }
 
-.skills_item {
-	width: 253px;
+.skills .row > .col {
+	flex-basis: 33%;
+	padding: 0 50px;
 }
 
 .icon_1 {
 	width: 64px;
 	height: 64px;
 	margin: 0px auto 30px;
+	background-repeat: no-repeat;
 	transition-property: background;
 	transition-delay: .05s;
 	transition-duration: .35s;
@@ -284,6 +290,7 @@ img {
 	width: 64px;
 	height: 64px;
 	margin: 0px auto 30px;
+	background-repeat: no-repeat;
 	transition-property: background;
 	transition-delay: .05s;
 	transition-duration: .35s;
@@ -295,6 +302,7 @@ img {
 	width: 51px;
 	height: 64px;
 	margin: 0px auto 30px;
+	background-repeat: no-repeat;
 	transition-property: background;
 	transition-delay: .05s;
 	transition-duration: .35s;
@@ -348,6 +356,14 @@ img {
 	opacity: 0.5;
 }
 
+.gallery .row {
+	margin: 0px -80px;
+}
+
+.gallery .row > .col {
+	padding: 0 80px;
+}
+
 .gallery_row:first-child {
 	margin-bottom: 55px;
 }
@@ -361,6 +377,7 @@ img {
 	height: 300px;
 	position: relative;
 	overflow: hidden;
+	background-repeat: no-repeat;
 	transition-property: background;
 	transition-delay: .01s;
 	transition-duration: .4s;
@@ -557,13 +574,23 @@ img {
 	margin-bottom: 80px;
 }
 
+.social .row {
+	margin: 0 -124px;
+}
+
+.social .row > .col {
+	padding: 0 124px;
+}
+
 .social_item {
 	position: relative;
-	top: -25px;
+	top: 0px;
+	left: 0px;
+	transform: translateY(-25px);
 	background: #FFF!important;
 	width: 90px;
 	height: 90px;
-	transition-property: top, box-shadow;
+	transition-property: transform, box-shadow;
 	transition-duration: .4s;
 	transition-timing-function: linear;
 }
@@ -574,6 +601,7 @@ img {
 	left: 50%;
 	margin-right: -50%;
 	transform: translate(-50%, -50%);
+	background-repeat: no-repeat;
 	transition-property: background;
 	transition-duration: .4s;
 	transition-timing-function: linear;
@@ -588,7 +616,7 @@ img {
 }
 
 .social_item:hover {
-	top: -40px;
+	transform: translateY(-40px);
 }
 
 /* Copyright */
@@ -599,4 +627,12 @@ img {
 	font-weight: 300;
 	color: #FFF;
 	font-size: 23px;
+}
+
+.copyright .row {
+	justify-content: space-between;
+}
+
+.copyright .row > .col {
+	flex-grow: 0;
 }

@@ -86,7 +86,7 @@ img {
 	top: 0;
 	left: 0;
 	background-repeat: no-repeat;
-	transition-property: background;
+	transition-property: background-image;
 	transition-delay: .01s;
 	transition-duration: .4s;
 	transition-timing-function: linear;
@@ -279,7 +279,7 @@ img {
 	height: 64px;
 	margin: 0px auto 30px;
 	background-repeat: no-repeat;
-	transition-property: background;
+	transition-property: background-image;
 	transition-delay: .05s;
 	transition-duration: .35s;
 	transition-timing-function: linear;
@@ -291,7 +291,7 @@ img {
 	height: 64px;
 	margin: 0px auto 30px;
 	background-repeat: no-repeat;
-	transition-property: background;
+	transition-property: background-image;
 	transition-delay: .05s;
 	transition-duration: .35s;
 	transition-timing-function: linear;;
@@ -303,7 +303,7 @@ img {
 	height: 64px;
 	margin: 0px auto 30px;
 	background-repeat: no-repeat;
-	transition-property: background;
+	transition-property: background-image;
 	transition-delay: .05s;
 	transition-duration: .35s;
 	transition-timing-function: linear;
@@ -378,7 +378,7 @@ img {
 	position: relative;
 	overflow: hidden;
 	background-repeat: no-repeat;
-	transition-property: background;
+	transition-property: background-image;
 	transition-delay: .01s;
 	transition-duration: .4s;
 	transition-timing-function: linear;

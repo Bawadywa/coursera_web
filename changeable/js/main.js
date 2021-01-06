@@ -1,14 +1,10 @@
+var body = document.querySelector("body");
 var INDEX = 0, FLAG = true, form_style = "form_style";
+var themes = ["purple", "red", "turquoise"];
+
 
 function change(){
-	change_header();
-	change_nav();
-	change_header_btn();
-	change_name_title();
-	change_skills();
-	change_gallery();
-	change_contact();
-	change_footer();
+	body.className = themes[INDEX];
 }
 
 function run_change(event){

@@ -1,242 +1,256 @@
 /* HOVER */
-.purple_hover:hover {
+.purple .logo:hover, .purple .nav_link:hover {
 	color: #9b59b6;
-}
+}  
 
-.red_hover:hover {
+.red .logo:hover, .red .nav_link:hover {
 	color: #e74c3c;
-}
+}  
 
-.turquoise_hover:hover {
+.turquoise .logo:hover, .turquoise .nav_link:hover {
 	color: #1abc9c;
-}
+}  
 
-.purple_btn_hover:hover {
+/* BTN HOVER */
+.purple .gallery_button:hover {
 	box-shadow: 0px 0px 0px 6px rgba(155, 89, 182, 0.5);
 }
 
-.red_btn_hover:hover {
+.red .gallery_button:hover {
 	box-shadow: 0px 0px 0px 6px rgba(231, 76, 60, 0.5);
 }
 
-.turquoise_btn_hover:hover {
+.turquoise .gallery_button:hover {
 	box-shadow: 0px 0px 0px 6px rgba(26, 188, 156, 0.5);
 }
 
 /* FOCUS */
-.purple_focus:focus {
+.purple .form_style:focus {
 	box-shadow: 0px 0px 0px 3px rgb(155, 89, 182);
 }
 
-.red_focus:focus {
+.red .form_style:focus {
 	box-shadow: 0px 0px 0px 3px rgb(231, 76, 60);
 }
 
-.turquoise_focus:focus {
+.turquoise .form_style:focus {
 	box-shadow: 0px 0px 0px 3px rgb(26, 188, 156);
 }
 
 /* COLOR */
-.purple {
+.purple .name_title, .purple .skill_title, .purple .contact_title {
 	color: #9b59b6;
 }
 
-.red {
+.red .name_title, .red .skill_title, .red .contact_title {
 	color: #e74c3c;
 }
 
-.turquoise {
+.turquoise .name_title, .turquoise .skill_title, .turquoise .contact_title {
 	color: #1abc9c;
 }
 
 /* BACKGROUND-image */
-.purple_bg {
+.purple .gallery_button, .purple .footer_main {
 	background: #9b59b6;
 }
 
-.red_bg {
+.red .gallery_button, .red .footer_main {
 	background: #e74c3c;
 }
 
-.turquoise_bg {
+.turquoise .gallery_button,.turquoise .footer_main {
 	background: #1abc9c;
 }
 
 /* HEADER IMG */
-.purple_header {
+.purple .header_images {
 	background-image: url("../images/purple_header.jpg");
 }
 
-.red_header {
+.red .header_images {
 	background-image: url("../images/red_header.jpg");
 }
 
-.turquoise_header {
+.turquoise .header_images {
 	background-image: url("../images/turquoise_header.jpg");
 }
 
 /* Header Button */
-.purple_header_button {
+.purple .header_button {
 	box-shadow: 0px 0px 0px 6px rgba(155, 89, 182, 0.5);
 	background: #9b59b6;
 }
 
-.red_header_button {
+.red .header_button {
 	box-shadow: 0px 0px 0px 6px rgba(231, 76, 60, 0.5);
 	background: #e74c3c;
 }
 
-.turquoise_header_button {
+.turquoise .header_button {
 	box-shadow: 0px 0px 0px 6px rgba(26, 188, 156, 0.5);
 	background: #1abc9c;
 }
 
+.header_button:hover {
+	font-size: 27px;
+	padding: 16px 50px;
+	box-shadow: 0px 0px 0px 0px #FFF;
+}
+
 /* INTRODUCTION ICONS */
 
-.purple_icon_1 {
+.purple .icon_1 {
 	background-image: url("../images/purple_icon_1.png");
 }
-.red_icon_1 {
+.red .icon_1 {
 	background-image: url("../images/red_icon_1.png");
 }
-.turquoise_icon_1 {
+.turquoise .icon_1 {
 	background-image: url("../images/turquoise_icon_1.png");
 }
 
 
-.purple_icon_2 {
+.purple .icon_2 {
 	background-image: url("../images/purple_icon_2.png");
 }
-.red_icon_2 {
+.red .icon_2 {
 	background-image: url("../images/red_icon_2.png");
 }
-.turquoise_icon_2 {
+.turquoise .icon_2 {
 	background-image: url("../images/turquoise_icon_2.png");
 }
 
 
-.purple_icon_3 {
+.purple .icon_3 {
 	background-image: url("../images/purple_icon_3.png");
 }
-.red_icon_3 {
+.red .icon_3 {
 	background-image: url("../images/red_icon_3.png");
 }
-.turquoise_icon_3 {
+.turquoise .icon_3 {
 	background-image: url("../images/turquoise_icon_3.png");
 }
 
 /* GALLERY IMAGES */
 
-.purple_img_1 {
+.purple .img_1 {
 	background-image: url(../images/purple_img_1.jpg);
 }
-.red_img_1 {
+.red .img_1 {
 	background-image: url(../images/red_img_1.jpg);
 }
-.turquoise_img_1 {
+.turquoise .img_1 {
 	background-image: url(../images/turquoise_img_1.jpg);
 }
 
-.purple_img_2 {
+.purple .img_2 {
 	background-image: url(../images/purple_img_2.jpg);
 }
-.red_img_2 {
+.red .img_2 {
 	background-image: url(../images/red_img_2.jpg);
 }
-.turquoise_img_2 {
+.turquoise .img_2 {
 	background-image: url(../images/turquoise_img_2.jpg);
 }
 
-.purple_img_3 {
+.purple .img_3 {
 	background-image: url(../images/purple_img_3.jpg);
 }
-.red_img_3 {
+.red .img_3 {
 	background-image: url(../images/red_img_3.jpg);
 }
-.turquoise_img_3 {
+.turquoise .img_3 {
 	background-image: url(../images/turquoise_img_3.jpg);
 }
 
-.purple_img_4 {
+.purple .img_4 {
 	background-image: url(../images/purple_img_4.jpg);
 }
-.red_img_4 {
+.red .img_4 {
 	background-image: url(../images/red_img_4.jpg);
 }
-.turquoise_img_4 {
+.turquoise .img_4 {
 	background-image: url(../images/turquoise_img_4.jpg);
 }
 
 /* IMG INFO */
-.purple_style {
+.purple .img_info, .purple .img_button, .purple .social_item {
 	background: #9b59b6;
 	color: #6b3f7d;
 	box-shadow: 0px 0px 0px 7px rgba(155, 89, 182, 0.5);
 }
 
-.red_style {
+.red .img_info, .red .img_button, .red .social_item {
 	background: #e74c3c;
 	color: #9d3b31;
 	box-shadow: 0px 0px 0px 7px rgba(231, 76, 60, 0.5);
 }
 
-.turquoise_style {
+.turquoise .img_info, .turquoise .img_button, .turquoise .social_item {
 	background: #1abc9c;
 	color: #297465;
 	box-shadow: 0px 0px 0px 7px rgba(26, 188, 156, 0.5);
 }
 
+.img_button:hover {
+	top: 18px!important;
+	right: 18px!important;
+	padding: 18px;
+	box-shadow: 0px 0px 0px 1px #FFF;
+}
+
 
 /* SOCIAL */
-.purple_social_1 {
+.purple .social_1 {
 	width: 48px;
 	height: 39px;
 	background-image: url(../images/purple_social_1.png);
 }
 
-.red_social_1 {
+.red .social_1 {
 	width: 48px;
 	height: 39px;
 	background-image: url(../images/red_social_1.png);
 }
 
-.turquoise_social_1 {
+.turquoise .social_1 {
 	width: 48px;
 	height: 39px;
 	background-image: url(../images/turquoise_social_1.png);
 }
 
-.purple_social_2 {
+.purple .social_2 {
 	width: 38px;
 	height: 38px;
 	background-image: url(../images/purple_social_2.png);
 }
 
-.red_social_2 {
+.red .social_2 {
 	width: 38px;
 	height: 38px;
 	background-image: url(../images/red_social_2.png);
 }
 
-.turquoise_social_2 {
+.turquoise .social_2 {
 	width: 38px;
 	height: 38px;
 	background-image: url(../images/turquoise_social_2.png);
 }
 
-.purple_social_3 {
+.purple .social_3 {
 	width: 19px;
 	height: 38px;
 	background-image: url(../images/purple_social_3.png);
 }
 
-.red_social_3 {
+.red .social_3 {
 	width: 19px;
 	height: 38px;;
 	background-image: url(../images/red_social_3.png);
 }
 
-.turquoise_social_3 {
+.turquoise .social_3 {
 	width: 19px;
 	height: 38px;
 	background-image: url(../images/turquoise_social_3.png);

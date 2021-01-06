@@ -197,14 +197,6 @@ img {
 	transition-timing-function: linear;
 }
 
-
-.header_button:hover {
-	font-size: 27px;
-	padding: 16px 50px;
-	box-shadow: 0px 0px 0px 0px #FFF;
-}
-
-
 /* INTRODUCTION */
 .intro_section {
 	width: 100%;
@@ -418,16 +410,9 @@ img {
 	border: none;
 	cursor: pointer;
 	transition-property: top, right, padding, box-shadow, background;
-	transition-duration: .4s;
+	transition-duration: .3s;
 	transition-timing-function: linear;
 	z-index: 3;
-}
-
-.img_button:hover {
-	top: 18px!important;
-	right: 18px!important;
-	padding: 18px;
-	box-shadow: 0px 0px 0px 1px #FFF;
 }
 
 .gallery_img:hover .effect{

@@ -475,7 +475,7 @@ img {
 .contact_section {
 	width: 100%;
 	height: 100%;
-	margin-bottom: 150px;
+	margin-bottom: 200px;
 }
 
 .contact {
@@ -532,6 +532,29 @@ img {
 
 .form_style::placeholder {
 	color: #cecece;
+}
+
+.contact_button {
+	position: absolute;
+	bottom: -100px;
+	margin: 0 50%;
+	transform: translate(-50%);
+	text-align: center;
+	text-transform: uppercase;
+	font-family: Rokkitt;
+	font-weight: 300;
+	font-size: 24px;
+	cursor: pointer;
+	padding: 10px 80px;
+	color: #FFF;
+	z-index: 3;
+	width: 35%;
+	display: block;
+	border: none;
+	transition-property: background, box-shadow, width, text-shadow;
+	transition-duration: .4s, .4s, .6s, .4s;
+	transition-delay: 0s, .2s, 0s, 0s;
+	transition-timing-function: linear;
 }
 
 

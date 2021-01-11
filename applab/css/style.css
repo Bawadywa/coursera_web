@@ -32,6 +32,7 @@ body {
 
 .header_outer {
 	margin-top: 95px;
+	margin-bottom: 115px;
 }
 
 .container_outer {
@@ -165,13 +166,12 @@ body {
 .header_main {
 	position: relative;
 	background: url('../images/header/bg.png') no-repeat;
-	background-size: 100%;
 }
 
 .main_text {
 	position: relative;
 	padding-top: 220px;
-	padding-bottom: 230px;
+	padding-bottom: 257px;
 	margin-left: 70px;
 }
 
@@ -243,4 +243,282 @@ body {
 	box-shadow: 5px 0px 40px rgba(0, 0, 0, .2);
 	border-radius: 60px;
 
+}
+
+/* SECTION COMPANIES */
+.section_companies {
+	position: relative;
+	width: 100%;
+	margin-bottom: 120px;
+}
+
+.companies_outer {
+	width: 100%;
+	padding: 0 120px;
+	position: relative;
+}
+
+.companies_title {
+	font-size: 16px;
+	font-weight: 500;
+	text-align: center;
+	color: var(--dark-blue);
+	margin-bottom: 45px;
+}
+
+.companies_main {
+	display: flex;
+	justify-content: space-between;
+}
+
+.southwest {
+	margin-top: 36px;
+}
+
+.anubis {
+	margin-top: 5px;
+}
+
+.alonzo {
+	margin-top: 20px;
+}
+
+.express {
+	margin-top: 0;
+}
+
+.maniac {
+	margin-top: 30px;
+}
+
+/* SECTION FEATURES */
+.section_features {
+	width: 100%;
+	margin-bottom: 0px;
+}
+
+.features_outer {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+}
+
+.features_img {
+	margin-left: 30px;
+}
+
+.features_main {
+	margin-left: 40px;
+	padding-top: 60px;
+	padding-right: 280px;
+}
+
+.features_title {
+	font-size: 36px;
+	font-weight: 700;
+	color: var(--dark-blue);
+	line-height: 1.278;
+	margin-bottom: 10px;
+}
+
+.features_desc {
+	font-size: 16px;
+	font-weight: 400;
+	display: inline-block;
+	margin-bottom: 95px;
+}
+
+.features {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.feature_item {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-bottom: 65px;
+}
+
+.feature_item:last-child {
+	margin-bottom: 0;
+}
+
+.feature_img {
+	padding: 14px;
+	border-radius: 50%;
+	margin-right: 30px;
+	position: relative;
+}
+
+.feature_icon {
+	position: relative;
+	top: 2px;
+}
+
+.speed {
+	background: #ffecef;
+	top: 5px;
+}
+
+.prototyping {
+	background: #f4f4ff;
+}
+
+.vector {
+	background: #e4ffee;
+	bottom: 5px;
+}
+
+.feature_title {
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.speed + .feature_info .feature_title {
+	color: #f55767;
+}
+
+.prototyping + .feature_info .feature_title {
+	color: #2563ff;
+}
+
+.vector + .feature_info .feature_title {
+	color: #40975f;
+}
+
+
+.feature_desc {
+	font-size: 16px;
+	font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* FIGURES */
+
+.figures {
+	width: 100%;
+}
+
+/* CIRCLE */
+.first_circle {
+	top: 41px;
+	left: -43px;
+}
+
+.second_circle {
+	top: 0px;
+	right: 345px;
+}
+
+.third_circle {
+	bottom: 78px;
+	left: 180px;
+}
+
+.fourth_circle {
+	bottom: 58px;
+	right: -122px;
+}
+
+/* RHOMBUS */
+.first_rhombus {
+	top: 136px;
+	left: 335px;
+}
+
+
+/* CROSS */
+.first_cross {
+	bottom: 218px;
+	left: 603px;
+	position: absolute;
+}
+
+.second_cross {
+	bottom: 167px;
+	left: -165px;
+	position: absolute;
+}
+
+.third_cross {
+	bottom: 42px;
+	left: 463px;
+}
+
+/* CIRCLE STYLES */
+.circle_grey {
+	padding: 6px;
+	position: absolute;
+	background-color: #FFF;
+	border-radius: 50%;
+	border: 7px solid #d4cdfd;
+}
+
+.circle_gradient {
+	width: 26px;
+	height: 26px;
+	position: absolute;
+	border: double 6px transparent;
+	border-radius: 50%;
+	background-image: linear-gradient(#FFF, #FFF), linear-gradient(#ff646e, #f98d6c);
+	background-origin: border-box;
+  	background-clip: content-box, border-box;
+  	z-index: 100;
+}
+
+/* RHOMBUS STYLES*/
+.rhombus {
+	position: absolute;
+	padding: 9px;
+	border: 4px solid #d5cefd;
+	transform: rotateZ(45deg);
+}
+
+/* CROSS STYLES */
+.cross_grey {
+	width: 17px;
+	height: 5px;
+	background-color: #d4cdfd;
+	transform: rotateZ(-45deg);
+}
+
+.cross_grey::before {
+	position: absolute;
+	width: 17px;
+	height: 5px;
+	content: "";
+	background-color: #d4cdfd;
+	transform: rotateZ(90deg);
+}
+
+.cross_rotate {
+	transform: rotateZ(-5deg);
+}
+
+
+.cross_blue {
+	position: absolute;
+	width: 19px;
+	height: 2px;
+	background-color: #6883de;
+}
+
+.cross_blue::before {
+	position: absolute;
+	content: "";
+	width: 19px;
+	height: 2px;
+	background-color: #6883de;
+	transform: rotateZ(90deg);
 }

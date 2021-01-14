@@ -73,6 +73,7 @@ body {
 .logo_text {
 	position: relative;
 	left: 0px;
+	display: inline-block;
 	color: var(--orange);
 	text-shadow: 0px 0px 10px transparent;
 	margin-right: 0px;
@@ -84,20 +85,18 @@ body {
 @keyframes punch {
 	0% {
 		margin-right: 0px;
-		left: 0px;
+		transform: translateX(0px);
 	}
 
 	50% {
-		left: -90px;
+		transform: translateX(-90px);
 		margin-right: 90px;
 	}
 
 	100% {
-		left: 0px;
+		transform: translateX(0px);
 		margin-right: 0px;
 	}
-
-
 }
 
 .punch {
@@ -772,7 +771,8 @@ body {
 
 /* SECTION PURCHASE */
 .section_purchase {
-	margin-bottom: 400px;
+	margin-bottom: 310px;
+	position: relative;
 }
 
 .purchase_outer {
@@ -882,7 +882,7 @@ body {
 	padding-bottom: 25px;
 	position: relative;
 	overflow-y: hidden;
-	transition-property: box-shadow, padding-bottom, transform;
+	transition-property: box-shadow, padding-bottom, transform, margin-bottom;
 	transition-duration: .4s;
 	transition-timing-function: ease-in;
 }
@@ -960,10 +960,6 @@ body {
 	box-shadow: 0px 0px 2px 2px #ebebeb;
 }
 
-.card_outer:nth-child(2):hover {
-	padding-bottom: 70px;
-}
-
 @keyframes rotate {
 	0% {
 		transform: rotateY(0deg);
@@ -976,6 +972,22 @@ body {
 
 .rotate {
 	animation: ease-in rotate .4s;
+}
+
+.trail:hover {
+	padding-bottom: 70px;
+	margin-bottom: -70px;
+}
+
+
+.section_purchase:after {
+	content: "";
+	width: 100%;
+	height: 2px;
+	display: block;
+	background: #f4f4f4;
+	position: absolute;
+	bottom: -150px;
 }
 
 

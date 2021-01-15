@@ -205,19 +205,19 @@ header {
 }
 
 .slider_next {
-	right: -100%;
+	transform: translateX(100%);
 	opacity: 0;
 	display: block;
 }
 
 .slider_prev {
-	right: 100%;
+	transform: translateX(-100%);
 	opacity: 0;
 	display: block;
 }
 
 .slider_on {
-	right: 0;
+	transform: translateX(0);
 	opacity: 1;
 	display: block;
 }

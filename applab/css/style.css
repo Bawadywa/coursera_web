@@ -59,7 +59,7 @@ body {
 
 .logo {
 	font-weight: 700;
-	font-size: 30px;
+	font-size: 35px;
 	color: var(--dark-blue);
 	text-shadow: 0px 0px 10px transparent;
 	text-decoration: none;
@@ -142,11 +142,12 @@ body {
 	font-weight: 700;
 	font-size: 16px;
 	color: #FFF;
-	padding: 20px 40px;
+	padding: 18px 41px;
 	background-color: var(--blue);
 	border-radius: 30px;
+	border: 1px solid var(--blue);
 	cursor: pointer;
-	transition-property: background-color;
+	transition-property: background-color, color, border;
 	transition-duration: .3s;
 	transition-timing-function: linear;
 }
@@ -157,7 +158,8 @@ body {
 }
 
 .button_style:hover {
-	background-color: var(--light-blue);
+	background-color: #fff;
+	color: var(--blue);
 }
 
 
@@ -199,7 +201,7 @@ body {
 	background-color: #feaa25;
 	padding: 8px;
 	border-radius: 50%;
-	animation: linear 1.5s bang infinite;
+	animation: linear 1.25s bang infinite;
 }
 
 @keyframes bang {
@@ -208,19 +210,17 @@ body {
 	}
 
 	50% {
-		box-shadow: 0px 0px 11px 10px rgba(254, 170, 37, 0.8);
+		box-shadow: 0px 0px 8px 7px rgba(254, 170, 37, 0.8);
 	}
 
 	95% {
-		box-shadow: 0px 0px 20px 17px rgba(254, 170, 37, 0);
+		box-shadow: 0px 0px 17px 14px rgba(254, 170, 37, 0);
 	}
 
 	100% {
 		box-shadow: 0px 0px 1px rgba(254, 170, 37, 0);
 	}
 }
-
-
 
 .main_title {
 	font-size: 60px;
@@ -823,9 +823,12 @@ body {
 	top: 3px;
 	left: 3px;
 	background: var(--blue);
-	padding: 22px 68px;
+	padding: 21px 67px;
 	border-radius: 50px;
-	transition: left .4s ease-in;
+	border: 1px solid var(--blue);
+	transition: border, background, transform;
+	transition-duration: .4s;
+	transition-timing-function: ease-in; 
 }
 
 .monthly_title, .annualy_title {
@@ -838,9 +841,10 @@ body {
 	color: #fff;
 	top: 13px;
 	left: 39px;
+	transform: translateX(0px);
 	transition-property: transform, font-weight, color;
 	transition-duration: .4s;
-	transition-timing-function: .linear
+	transition-timing-function: linear;
 }
 
 .annualy_title {
@@ -850,12 +854,23 @@ body {
 	right: 39px;
 	transition-property: transform, font-weight, color;
 	transition-duration: .4s;
-	transition-timing-function: .linear
+	transition-timing-function: linear;
 }
 
+.fake_toggle:hover::before{
+	background: #fff;
+}
+
+.real_toggle + .fake_toggle:hover .monthly_title {
+	color: var(--blue);
+}
+
+.real_toggle:checked + .fake_toggle:hover .annualy_title {
+	color: var(--blue);
+}
 
 .real_toggle:checked + .fake_toggle::before {
-	left: 142px;
+	transform: translateX(138px);
 }
 
 .real_toggle:checked + .fake_toggle .monthly_title {
@@ -977,16 +992,16 @@ body {
 	animation: ease-in rotate .4s;
 }
 
-.trail:hover {
+.trial:hover {
 	padding-bottom: 70px;
 	margin-bottom: -70px;
 }
-.trail:hover .card_link {
+.trial:hover .card_link {
 	transition: opacity  .2s .4s linear;
 	opacity: 1;
 }
 
-.trail .card_link {
+.trial .card_link {
 	display: block;
 }
 
@@ -1153,8 +1168,9 @@ body {
 }
 
 .btn_on:hover {
-	border: 1px solid var(--light-blue);
-	color: var(--light-blue);
+	border: 1px solid var(--blue);
+	/*background: #fff;*/
+	/*color: var(--orange);*/
 }
 
 

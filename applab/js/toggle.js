@@ -9,10 +9,10 @@ var toggle = {
 
 		function init_data() {
 			self.rotate_class = 'rotate';
-			self.trail_class = 'trail';
+			self.trial_class = 'trial';
 			self.price = [['$0', '$99'], ['$180', '$399']];
 			self.term = [' / month', ' / year'];
-			self.subscribe = [['Start free trail', 'Subscribe Now'], ['Subscribe Now', 'Subscribe Now']];
+			self.subscribe = [['Start free trial', 'Subscribe Now'], ['Subscribe Now', 'Subscribe Now']];
 			self.title = [['Business Class', 'Pro Master'], ['Business', 'Professional']];
 			self.desc = [['For small teams or office', 'For Best opportunities'],
 						 ['For office and small projects', 'For big projects and big teams']];
@@ -68,7 +68,7 @@ var toggle = {
 
 		setTimeout(function() {
 			self.rotate();
-			self.card_outers[1].classList.toggle(self.trail_class);
+			self.card_outers[1].classList.toggle(self.trial_class);
 		}, 500);
 	}
 }

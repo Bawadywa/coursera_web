@@ -21,7 +21,7 @@ var logo = {
     },
 
     animation: function(event) {
-    	var logo_text = event.target.children[0];
+    	var logo_text = event.target.firstChild;
     	logo_text.classList.add(this.punch_class);
 
 		var self = this;

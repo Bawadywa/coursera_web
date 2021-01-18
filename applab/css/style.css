@@ -175,7 +175,6 @@ body {
 	transition-timing-function: linear;
 }
 
-
 .nav_button {
 	margin-left: 60px;
 }
@@ -184,6 +183,69 @@ body {
 	background-color: #fff;
 	color: var(--blue);
 }
+
+.menu {
+	width: 35px;
+	height: 30px;
+	background: transparent;
+	display: none;
+	position: relative;
+	overflow: auto;
+	transition-property: transform;
+	transition-duration: .3s;
+	transition-timing-function: linear;
+}
+
+ .menu::before, .menu_line, .menu::after {
+ 	content: "";
+	display: block;
+	width: 100%;
+	height: 3px;
+	border-radius: 50px;
+	background: var(--dark-blue);
+	transition-property: opacity, background, top, bottom, transform; 
+	transition-duration: .3s;
+	transition-timing-function: linear;
+}
+
+.menu::before {
+	position: absolute;
+	top: 0px;
+}
+
+.menu::after {
+	position: absolute;
+	bottom: 0px;
+}
+
+.menu_off {
+	display: none;
+}
+
+.menu_on {
+	display: block;
+}
+
+.menu_active .menu_line {
+	opacity: 0;
+}
+
+.menu_active {
+	transform: rotateZ(90deg);
+}
+
+.menu_active::before {
+	top: 14px;
+	transform: rotateZ(-45deg);
+	background: var(--orange);
+}
+
+.menu_active::after {
+	bottom: 14px;
+	transform: rotateZ(45deg);
+	background: var(--orange);
+}
+
 
 
 

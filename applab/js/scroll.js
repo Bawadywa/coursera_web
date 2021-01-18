@@ -27,7 +27,7 @@ var scroll =  {
 
 		var scrolled = window.pageYOffset, distance;
 
-		if(element.getAttribute('id') === "home"){
+		if(element.getAttribute('id') === 'home'){
 			distance = element.offsetTop - scrolled - this.home_offset;
 		}else {
 			distance = element.offsetTop - scrolled - this.offset;

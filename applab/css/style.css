@@ -3,6 +3,7 @@
 	padding: 0;
 	box-sizing: border-box;
 	outline: none;
+
 }
 
 :root {
@@ -93,6 +94,7 @@ body {
 		transform: translateX(0px);
 	}
 }
+
 
 @keyframes right {
 	0% {
@@ -793,7 +795,7 @@ body {
 
 /* SECTION PURCHASE */
 .section_purchase {
-	margin-bottom: 310px;
+	margin-bottom: 220px;
 	position: relative;
 }
 
@@ -880,6 +882,7 @@ body {
 }
 
 .fake_toggle:hover::before{
+	transition-duration: .4s, .3s, .4s;
 	background: #fff;
 }
 
@@ -1050,8 +1053,12 @@ body {
 
 .people_main {
 	position: relative;
-	top: -90px;
 	left: -24px;
+}
+
+.people_img {
+	position: relative;
+	top: 90px;
 }
 
 .people_info {
@@ -1110,7 +1117,7 @@ body {
 	display: flex;
 	flex-direction: row;
 	transform: translateX(0px);
-	transition: transform 1s ease-in-out;
+	transition: transform .9s ease-in-out;
 }
 
 .slider_main {
@@ -1315,12 +1322,12 @@ body {
 	transition: transform .4s linear;
 }
 
-.plus::after {
-	transform: rotate(90deg);
+.opened .btn_form::after {
+	transform: rotate(0deg);
 }
 
-.minus::after {
-	transform: rotate(0deg);
+.closed .btn_form::after {
+	transform: rotate(90deg);
 }
 
 .section_faq:after {

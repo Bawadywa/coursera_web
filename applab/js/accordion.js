@@ -1,5 +1,6 @@
 var accordion = {
 	question_buttons: document.querySelectorAll('.question_button'),
+	faq_items: document.querySelectorAll('.faq_item'),
 	start: function() {
 		var self = this;
 		function init_data() {
@@ -21,22 +22,40 @@ var accordion = {
 		event_listeners();
 	},
 
-	open: function(target) {
-		target.firstChild.classList.replace(this.plus_class, this.minus_class);
-		target.parentNode.parentNode.classList.replace(this.closed_class, this.opened_class);
+	open: function(target) { 
+		target.classList.replace(this.closed_class, this.opened_class);
+		this.close_other(target);
 	},
 
 	close: function(target) {
-		target.firstChild.classList.replace(this.minus_class, this.plus_class);
-		target.parentNode.parentNode.classList.replace(this.opened_class, this.closed_class);
+		target.classList.replace(this.opened_class, this.closed_class);
+	},
+
+	close_other: function(target) {
+		for (var i = 0; i < this.faq_items.length; i++) {
+			if(this.faq_items[i] !== target) {
+				this.faq_items[i].classList.replace(this.opened_class, this.closed_class);
+			}
+			
+		}
+	},
+
+	disable: function(target) {
+		target.disabled = true;
+		setTimeout(function() {
+			target.disabled = false;
+		}, 400);
 	},
 
 	onclick: function(event) {
 		var target = event.currentTarget;
-		if(target.parentNode.parentNode.className.indexOf(this.closed_class) !== -1) {
-			this.open(target);
+		var parent = target.parentNode.parentNode;
+		if(parent.className.indexOf(this.closed_class) !== -1) {
+			this.open(parent);
+			this.disable(target);
 		}else {
-			this.close(target);
+			this.close(parent);
+			this.disable(target);
 		}
 	}
 }

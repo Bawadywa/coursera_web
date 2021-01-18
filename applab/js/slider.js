@@ -88,7 +88,7 @@ var slider = {
 		this.btn_prev.disabled = true;
 		setTimeout(function() {
 			self.btn_prev.disabled = false;
-		}, 1000);
+		}, 900);
 	},
 
 	disable_next: function() {
@@ -96,6 +96,6 @@ var slider = {
 		this.btn_next.disabled = true;
 		setTimeout(function() {
 			self.btn_next.disabled = false;
-		}, 1000);
+		}, 900);
 	}
 }

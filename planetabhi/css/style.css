@@ -528,7 +528,7 @@ footer {
 		padding-bottom: 15px;
 	}
 
-	header:before {
+	header::before {
 		content: '';
 		position: absolute;
 		width: 100%;

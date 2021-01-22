@@ -33,7 +33,7 @@ body {
 /* HEADER */
 
 .header {
-	margin-top: 95px;
+	padding-top: 95px;
 	margin-bottom: 115px;
 }
 
@@ -196,7 +196,7 @@ body {
 	transition-timing-function: linear;
 }
 
- .menu::before, .menu_line, .menu::after {
+.menu::before, .menu_line, .menu::after {
  	content: "";
 	display: block;
 	width: 100%;
@@ -216,14 +216,6 @@ body {
 .menu::after {
 	position: absolute;
 	bottom: 0px;
-}
-
-.menu_off {
-	display: none;
-}
-
-.menu_on {
-	display: block;
 }
 
 .menu_active .menu_line {
@@ -247,8 +239,6 @@ body {
 }
 
 
-
-
 /* HEADER MAIN TEXT */
 .header_main {
 	position: relative;
@@ -259,7 +249,7 @@ body {
 	position: relative;
 	padding-top: 220px;
 	padding-bottom: 257px;
-	margin-left: 70px;
+	padding-left: 70px;
 }
 
 .app_rate {
@@ -321,6 +311,7 @@ body {
 	font-weight: 400;
 	display: block;
 	margin-top: 10px;
+	padding-right: 590px;
 }
 
 
@@ -431,6 +422,7 @@ body {
 	font-size: 16px;
 	font-weight: 400;
 	display: inline-block;
+	white-space: nowrap;
 	margin-bottom: 95px;
 }
 
@@ -512,6 +504,7 @@ body {
 .feature_desc {
 	font-size: 16px;
 	font-weight: 500;
+	white-space: nowrap;
 }
 
 
@@ -804,7 +797,7 @@ body {
 }
 
 .ultimates_main {
-	margin-left: 240px;
+	padding-left: 240px;
 }
 
 .ultimates {
@@ -926,6 +919,10 @@ body {
 	color: #fff;
 	top: 13px;
 	left: 39px;
+	-webkit-user-select: none;  
+	-moz-user-select: none;     
+	-ms-user-select: none;      
+	user-select: none; 
 	transform: translateX(0px);
 	transition-property: transform, font-weight, color;
 	transition-duration: .4s, .4s, .6s;
@@ -937,6 +934,10 @@ body {
 	font-weight: 500;
 	top: 15px;
 	right: 39px;
+	-webkit-user-select: none;  
+	-moz-user-select: none;     
+	-ms-user-select: none;      
+	user-select: none; 
 	transform: translateX(0px);
 	transition-property: transform, font-weight, color;
 	transition-duration: .4s, .4s, .6s;
@@ -971,6 +972,20 @@ body {
 	font-weight: 800;
 	color: #fff;
 }
+
+.toggle_style::before {
+	transition-duration: .4s, .3s, .4s;
+	background: #fff;
+}
+
+.real_toggle + .toggle_style .monthly_title {
+	color: var(--blue);
+}
+
+.real_toggle:checked + .toggle_style .annualy_title {
+	color: var(--blue);
+}
+
 
 .purchase {
 	display: flex;
@@ -1106,6 +1121,7 @@ body {
 
 .section_people {
 	margin-bottom: 120px;
+	position: relative;
 }
 
 .people_outer {
@@ -1418,9 +1434,9 @@ body {
 }
 
 .download_inner {
-	position: relative;
+	position: absolute;
 	top: 75px;
-	right: -140px;
+	right: -115px;
 	padding-left: 13px;
 }
 
@@ -1567,23 +1583,23 @@ body {
 
 /* CIRCLE */
 .first_circle {
-	top: 41px;
+	top: 97px;
 	left: -43px;
 }
 
 .second_circle {
-	top: 0px;
-	right: 345px;
+	top: 56px;
+	right: 355px;
 }
 
 .third_circle {
 	bottom: 78px;
-	left: 180px;
+	left: 357px;
 }
 
 .fourth_circle {
 	bottom: 58px;
-	right: -122px;
+	right: 54px;
 }
 
 .fifth_circle {
@@ -1602,28 +1618,28 @@ body {
 }
 
 /* RHOMBUS */
+
 .first_rhombus {
 	top: 136px;
-	left: 335px;
+	left: 325px;
 }
-
 
 /* CROSS */
 .first_cross {
 	bottom: 218px;
-	left: 603px;
+	left: 780px;
 	position: absolute;
 }
 
 .second_cross {
 	bottom: 167px;
-	left: -165px;
+	left: 12px;
 	position: absolute;
 }
 
 .third_cross {
 	bottom: 42px;
-	left: 463px;
+	left: 640px;
 }
 
 .fourth_cross {

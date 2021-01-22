@@ -1,5 +1,5 @@
 var toggle = {
-	real_toggle: document.querySelector('.real_toggle'),
+	real_toggle: document.querySelector('.real_toggle'), fake_toggle: document.querySelector('.fake_toggle'),
 	card_outers: document.querySelectorAll('.card_outer'), card_mains: document.querySelectorAll('.card_main'),
 	card_prices: document.querySelectorAll('.card_price'), card_terms: document.querySelectorAll('.card_term'),
 	card_buttons: document.querySelectorAll('.card_button'), card_titles: document.querySelectorAll('.card_title'),
@@ -10,6 +10,7 @@ var toggle = {
 		function init_data() {
 			self.rotate_class = 'rotate';
 			self.trial_class = 'trial';
+			self.toggle_style_class = 'toggle_style';
 			self.price = [['$0', '$99'], ['$180', '$399']];
 			self.term = [' / month', ' / year'];
 			self.subscribe = [['Start free trial', 'Subscribe Now'], ['Subscribe Now', 'Subscribe Now']];
@@ -58,8 +59,28 @@ var toggle = {
 	    this.index = Number(!this.index);
 	},
 
+	disable: function() {
+		var self = this;
+		this.real_toggle.disabled = true;
+		
+		setTimeout(function() {
+			self.real_toggle.disabled = false;
+		}, 500)
+	}, 
+
+	continue_animation: function() {
+		var self = this;
+		this.fake_toggle.classList.add(this.toggle_style_class);
+
+		setTimeout(function() {
+			self.fake_toggle.classList.remove(self.toggle_style_class);
+		}, 500);
+	},
+
 	onclick: function(event) {
 		var self = this;
+		this.disable();
+		this.continue_animation();
 		this.rotate();
 
 		setTimeout(function(){

@@ -10,3 +10,249 @@
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { ... }
 
+@media (max-width: 1400px) {
+	/* JACKPOTS */
+	.jackpots_main {
+		padding-left: 70px;
+		padding-right: 30px;
+	}
+
+	.jackpot .col {
+		margin-right: 100px;
+	}
+
+	.jackpot_desc {
+		font-size: 15.5px;
+	}
+
+	/* REASONS */
+	.reasons_main {
+		padding-left: 105px;
+		padding-right: 85px;
+	}
+
+	.reason_desc {
+		font-size: 15.5px;
+	}
+
+	/* ULTIMATES */
+	.ultimates_outer {
+		padding-left: 120px;
+	}
+
+	/* PEOPLE */
+	.people_img {
+		left: -170px;
+	}
+
+	.people_main {
+		left: -120px;
+	}
+
+	/* DOWNLOAD */
+	.download_inner {
+		left: 165px;
+	}
+
+	.download_bg {
+		left: 50px;
+	}
+
+	.fourth_cross {
+		right: 561px;
+	}
+
+	.fifth_circle {
+		right: 350px;
+	}
+
+	.sixth_circle {
+		right: 677px;
+	}
+}
+
+
+@media (max-width: 1320px ) {
+	.container_main {
+		width: 1150px;
+	}
+
+	/* HEADER */
+	.header {
+		padding-top: 60px;
+		margin-bottom: 95px;
+	}
+
+	.main_title {
+		font-size: 55px;
+		padding: 7px 0;
+	}
+
+	.first_circle {
+		left: -20px;
+	}
+
+	.first_cross {
+		display: none;
+	}
+
+	/* COMPANIES */
+	.section_companies {
+		margin-bottom: 100px;
+	}
+	.companies_title {
+		font-size: 18px;
+	}
+
+	/* FEATURES */
+	.features_img {
+		margin-left: 0;
+	}
+
+	.features_desc {
+		margin-bottom: 65px;
+	}
+
+	/* JACKPOTS */
+	.jackpots_title {
+		font-size: 38px;
+	}
+
+	.jackpots_title::after {
+		height: 135px;
+	}
+
+	.jackpots_main {
+		padding-left: 80px;
+		padding-right: 20px;
+	}
+
+	/* DESIGN */
+	.section_design {
+		margin-bottom: 170px;
+	}
+
+	.design_img {
+		left: -20px;
+	}
+
+	/* REASONS */
+	.section_reasons {
+		margin-bottom: 150px;
+	}
+
+	/* ULTIMATES */
+	.section_ultimates {
+		margin-bottom: 130px;
+	}
+
+	/* PURCHASE */
+	.section_purchase {
+		margin-bottom: 190px;
+	}
+
+	.section_purchase::after {
+		bottom: -120px;
+	}
+
+	.purchase_desc {
+		margin-bottom: 55px;
+	}
+
+	.card_price {
+		font-size: 58px;
+	}
+
+	/* PEOPLE */
+	.people_title {
+		font-size: 38px;
+	}
+
+	.people_img {
+		left: -200px;
+	}
+
+	.people_main {
+		left: -195px;
+	}
+
+	/* FAQ */
+	.faq_outer {
+		padding: 0 125px;
+	}
+
+	/* DOWNLOAD */
+
+	.download_inner {
+		padding-top: 60px;
+		left: 255px;
+	}
+
+	.download_bg {
+		left: 140px;
+	}
+
+	.fourth_cross {
+		right: 471px;
+	}
+
+	.fifth_circle {
+		right: 260px;
+	}
+
+	.sixth_circle {
+		right: 587px;
+	}
+
+	/* FOOTER */
+	.footer {
+		padding-top: 110px;
+		padding-bottom: 90px;
+	}
+}
+
+@media (max-width: 1230px) {
+	/* PEOPLE */
+	.people_img {
+		left: -230px;
+	}
+
+	.people_main {
+		left: -225px;
+	}
+
+	/* DOWNLOAD */
+
+	.section_download {
+		margin-bottom: 70px;
+	}
+
+	.download_bg {
+		display: none;
+	}
+
+	.download_outer .figures {
+		display: none;
+	}
+
+	.download_main {
+		display: block;
+	}
+
+	.download_inner {
+		position: static;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.download_title {
+		font-size: 46px;
+
+	}
+	.download_link:nth-child(1) {
+		margin-right: 100px;
+	}
+}

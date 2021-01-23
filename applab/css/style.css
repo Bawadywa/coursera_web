@@ -390,14 +390,12 @@ body {
 
 /* SECTION FEATURES */
 .section_features {
-	width: 100%;
 	margin-bottom: 75px;
 }
 
 .features_outer {
 	position: relative;
 	display: flex;
-	justify-content: space-between;
 }
 
 .features_img {
@@ -405,9 +403,8 @@ body {
 }
 
 .features_main {
-	margin-left: 40px;
+	margin-left: 50px;
 	padding-top: 60px;
-	padding-right: 280px;
 }
 
 .features_title {
@@ -442,6 +439,7 @@ body {
 .feature_item:last-child {
 	margin-bottom: 0;
 }
+
 /* IMG STYLE */
 .img_style {
 	padding: 14px;
@@ -510,7 +508,6 @@ body {
 
 /* SECTION JACKPOTS */
 .section_jackpots {
-	width: 100%;
 	margin-bottom: 120px;
 }
 
@@ -522,36 +519,35 @@ body {
 
 .jackpots_info {
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
 	margin-bottom: 110px;
+	padding-left: 15px;
 }
 
 .jackpots_title {
+	position: relative;
 	font-size: 40px;
 	font-weight: 700;
 	color: var(--dark-blue);
     line-height: 1.25;
-    position: relative;
-    left: 15px;
+    margin-right: 128px;
 }
 
-.jackpots_hr {
-	width: 150px;
-	transform: rotateZ(90deg);
-	height: 1px;
-	position: relative;
-	right: 10px;
-	background-color: #b9b9b8;
+.jackpots_title::after {
+	position: absolute;
+	top: 0;
+	right: -78px;
+	display: block;
+	content: "";
+	height: 150px;
+	width: 2px;
+	background: #dadada;
 	border: none;
 }
-
 
 .jackpots_desc {
 	font-size: 16px;
 	font-weight: 500;
-	position: relative;
-	right: 60px;
 }
 
 
@@ -636,13 +632,13 @@ body {
 .design_img {
 	position: relative;
 	left: -60px;
-	margin-right: 60px;
+
 }
 
 .design_main {
 	width: 100%;
-	position: relative;
-	top: 145px;
+	padding-top: 145px;
+	margin-left: 60px;
 }
 
 .design_title {
@@ -771,6 +767,7 @@ body {
 	font-size: 16px;
 	font-weight: 500;
 	line-height: 1.625;
+	white-space: nowrap;
 }
 
 /* SECTION ULTIMATES */
@@ -780,6 +777,10 @@ body {
 
 .ultimates_outer {
 	position: relative;
+	display: flex;
+	align-items: flex-start;
+	overflow: hidden;
+	padding-left: 240px;
 }
 
 .ultimates_title {
@@ -797,7 +798,6 @@ body {
 }
 
 .ultimates_main {
-	padding-left: 240px;
 }
 
 .ultimates {
@@ -843,9 +843,9 @@ body {
 }
 
 .ultimates_img {
-	position: absolute;
-	top: 20px;
-	right: 0;
+	position: relative;
+	margin-top: 20px;
+	right: 29px;
 }
 
 /* SECTION PURCHASE */
@@ -855,7 +855,6 @@ body {
 }
 
 .purchase_outer {
-	padding: 0 260px;
 	text-align: center;
 }
 
@@ -986,11 +985,11 @@ body {
 	color: var(--blue);
 }
 
-
 .purchase {
 	display: flex;
 	flex-direction: row;
 	align-items: flex-start;
+	justify-content: center;
 }
 
 .card_outer {
@@ -1127,6 +1126,7 @@ body {
 .people_outer {
 	display: flex;
 	flex-direction: row;
+	overflow: hidden;
 }
 
 .people_main {
@@ -1135,8 +1135,8 @@ body {
 }
 
 .people_img {
+	margin-top: 90px;
 	position: relative;
-	top: 90px;
 }
 
 .people_info {
@@ -1431,13 +1431,19 @@ body {
 	display: flex;
 	flex-direction: row;
 	align-items: flex-start;
+	justify-content: flex-end;
+	overflow: hidden;
 }
 
 .download_inner {
-	position: absolute;
-	top: 75px;
-	right: -115px;
-	padding-left: 13px;
+	padding-top: 75px;
+	position: relative;
+	left: 115px;
+	z-index: 3;
+}
+
+.download_bg {
+	position: relative;
 }
 
 .download_info {

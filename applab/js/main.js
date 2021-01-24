@@ -4,4 +4,3 @@ scroll.start();
 toggle.start();
 slider.start();
 accordion.start();
-

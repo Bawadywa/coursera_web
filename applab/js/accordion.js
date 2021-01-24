@@ -16,6 +16,8 @@ var accordion = {
 					self.onclick(event);
 				})
 			}
+
+			self.open(self.faq_items[0]);
 		}
 
 		init_data();
@@ -24,17 +26,30 @@ var accordion = {
 
 	open: function(target) { 
 		target.classList.replace(this.closed_class, this.opened_class);
+		var child = target.children[1];
+		child.style.maxHeight = this.count_height(child) + 'px';
 		this.close_other(target);
+	},
+
+	count_height: function(target) {
+		var height = 0;
+		for (var i = 0; i < target.children.length; i++) {
+			this.c = target.children[i].childNodes[0];
+			height += target.children[i].clientHeight;
+		}
+		return height;
 	},
 
 	close: function(target) {
 		target.classList.replace(this.opened_class, this.closed_class);
+		var child = target.children[1];
+		child.style.maxHeight = 0;
 	},
 
 	close_other: function(target) {
 		for (var i = 0; i < this.faq_items.length; i++) {
 			if(this.faq_items[i] !== target) {
-				this.faq_items[i].classList.replace(this.opened_class, this.closed_class);
+				this.close(this.faq_items[i]);
 			}
 			
 		}

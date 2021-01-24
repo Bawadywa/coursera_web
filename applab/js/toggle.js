@@ -43,17 +43,15 @@ var toggle = {
 
 	change_content: function() {
 		for (var i = 0; i < this.card_outers.length; i++) {
-			card_price = this.card_prices[i].innerHTML;
-			this.card_prices[i].innerHTML = this.price[this.index][i] +
-			card_price.slice(card_price.indexOf('<')).replace(this.term[this.term.length - (1 + this.index)],
-																		this.term[this.index]);
-			this.card_buttons[i].innerHTML = this.subscribe[this.index][i];
-			this.card_titles[i].innerHTML = this.title[this.index][i];
-			this.card_descs[i].innerHTML = this.desc[this.index][i];
+			this.card_prices[i].childNodes[0].nodeValue = this.price[this.index][i];
+			this.card_terms[i].innerText = this.term[this.index];
+			this.card_buttons[i].innerText = this.subscribe[this.index][i];
+			this.card_titles[i].innerText = this.title[this.index][i];
+			this.card_descs[i].innerText = this.desc[this.index][i];
 	    }
 
 	    for (var i = 0; i < this.card_features.length; i++) {
-	    	this.card_features[i].innerHTML = this.features[this.index][i];
+	    	this.card_features[i].innerText = this.features[this.index][i];
 	    }
 
 	    this.index = Number(!this.index);

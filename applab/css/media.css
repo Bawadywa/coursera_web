@@ -256,3 +256,470 @@
 		margin-right: 100px;
 	}
 }
+
+@media (max-width: 1200px) {
+	.container_main {
+		width: 992px;
+	}
+
+	:root {
+		--shift: 70px;
+		--logo_duration: 1.25s;
+	}
+
+	/* HEADER */
+	.header {
+		padding-top: 40px;
+	}
+
+	.logo {
+		font-size: 33px;
+	}
+
+	.header_img {
+		max-width: 33%;
+		height: auto;
+	}
+
+	.nav_item {
+		margin-right: 25px;
+	}
+
+	.nav_button {
+		margin-left: 40px;
+	}
+
+	.main_text {
+		padding-left: 30px;
+	}
+
+	.main_title {
+		font-size: 52px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	.second_circle {
+		right: 325px;
+	}
+
+	.first_rhombus {
+		left: 285px;
+	}
+
+	/* COMPANIES */
+	.companies_outer {
+		padding: 0 75px;
+	}
+
+	/* FEATURES */
+	.features_main {
+		margin-left: 0;
+	}
+
+	.features_img {
+		position: relative;
+		left: -50px;
+	}
+
+	/* JACKPOTS */
+	.jackpots_info {
+		margin-bottom: 80px;
+	}
+
+	.jackpots_title {
+		font-size: 35px;
+		white-space: nowrap;
+	}
+
+	.jackpots_title::after {
+		height: 130px;
+	}
+
+	.jackpots_desc {
+		white-space: nowrap;
+		font-size: 15px;
+	}
+
+	.jackpot_title {
+		font-size: 18px;
+		margin-top: 15px;
+	}
+
+	.jackpot_desc {
+		font-size: 14px;
+	}
+
+	.jackpots .col {
+		margin-right: 80px;
+	}
+
+	/* DESIGN */
+	.design_img {
+		left: -20px;
+		max-width: 55%;
+		height: auto;
+	}
+
+	.design_main {
+		margin-left: 20px;
+		padding-top: 100px;
+	}
+
+	/* REASONS */
+	.reasons_main {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+
+	.reasons_desc {
+		margin-bottom: 70px;
+	}
+
+	.reason_title {
+		font-size: 18px;
+	}
+
+	.reason_desc {
+		font-size: 14px;
+	}
+
+	.reasons .col {
+		margin-right: 100px;
+	}
+
+	/* ULTIMATES */
+	.ultimates_title {
+		font-size: 34px;
+	}
+
+	.ultimates_desc {
+		margin-bottom: 40px;
+	}
+
+	/* PURCHASE */
+	.card_info {
+		padding-top: 50px;
+		padding-bottom: 30px;
+	}
+
+	.card_features {
+		padding-top: 35px;
+	}
+
+	.card_feature {
+		margin-bottom: 30px;
+	}
+
+	/* PEOPLE */
+	.section_people::after {
+		content: "";
+		width: 100%;
+		height: 2px;
+		display: block;
+		background: #f4f4f4;
+		position: absolute;
+		bottom: -70px;
+	}
+
+	.people_img {
+		display: none;
+	}
+
+	.people_main {
+		position: static;
+		margin: 0 auto;
+		padding-left: 40px;
+	}
+
+	.comment_desc {
+		margin-bottom: 45px;
+	}
+
+	/* FAQ */
+	.faq_title {
+		font-size: 38px;
+	}
+
+	.question_title {
+		font-size: 18px;
+	}
+
+	.question_answer {
+		font-size: 15px;
+	}
+
+	.closed {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	/* DOWNLOAD */
+	.download_title {
+		font-size: 45px;
+	}
+
+}
+
+@media (max-width: 1100px) {
+	/* HEADER */
+	.header_nav {
+		padding: 0 10px;
+	}
+
+	.header_img {
+		max-width: 30%;
+		right: 115px;
+	}
+
+	:root {
+		--shift: 50px;
+		--logo_duration: 1s;
+	}
+
+	@keyframes left {
+		0% {
+			transform: translateY(0px);
+		}
+
+		50% {
+			transform: translateY(calc(-1*var(--shift)));
+		}
+
+		100% {
+			transform: translateY(0px);
+		}
+	}
+
+
+	@keyframes right {
+		0% {
+			transform: translateY(0px);
+		}
+
+		50% {
+			transform: translateY(var(--shift));
+		}
+
+		100% {
+			transform: translateY(0px);
+		}
+	}
+
+	.second_circle {
+		right: 335px;
+	}
+
+	/* FEATURES */
+	.features_main {
+		margin-left: -100px;
+	}
+
+	.features_img {
+		position: relative;
+		left: -130px;
+	}
+
+	/* JACKPOTS */
+	.jackpots_main {
+		padding-left: 50px;
+	}
+
+	/* ULTIMATES */
+	.section_ultimates{
+		display: none;
+	}
+
+	/* PURCHASE */
+	.section_purchase {
+		margin-bottom: 160px;
+	}
+
+	.section_purchase::after {
+		bottom: -110px;
+	}
+
+	/* FOOTER */
+	.footer {
+		padding-top: 100px
+		padding-bottom: 70px;
+	}
+
+	.footer_social {
+		margin-bottom: 65px;
+	}
+
+}
+
+@media (max-width: 992px) {
+	.container_main {
+		width: 900px;
+	}
+
+	.figures {
+		display: none;
+	}
+
+	/* HEADER */
+	.header {
+		margin-bottom: 190px;
+	}
+
+	.header::after {
+		content: "";
+		width: 100%;
+		height: 2px;
+		display: block;
+		background: #f4f4f4;
+		position: absolute;
+		bottom: -140px;
+	}
+
+	.header_nav{
+		position: fixed;
+		width: 100%;
+		top: 0;
+		left: 0;
+		z-index: 50;
+		margin: 0;
+		padding: 10px;
+		padding-bottom: 15px;
+		background: #fff;
+	}
+
+	.header_nav::before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-color: #FFF;
+		border-bottom: 3px solid var(--orange);
+		border-radius: 0px 0px 30px 30px;
+		z-index: 2;
+		box-shadow: 0px 2px  10px var(--orange);
+	}
+
+	.logo {
+		position: relative;
+		padding-left: 10px;
+		display: block;
+		z-index: 2;
+	}
+
+	.left {
+		animation: none;
+	}
+
+	.right {
+		animation: none;
+	}
+
+	.menu {
+		position: relative;
+		right: 10px;
+		display: block;
+		z-index: 2;
+	}
+
+	.nav_list {
+		position: fixed;
+		display: block;
+		width: 100%;
+		top: 0;
+		left: 0;
+		padding: 0;
+		background: #fff;
+		transform: translateY(-300px);
+		transition: transform .4s linear;
+	}
+
+	.nav_active {
+		transform: translateY(78px);
+	}
+
+	.nav_item {
+		display: block;
+		width: 100%;
+		margin-right: 0px;
+		text-align: center;
+	}
+
+	.nav_link {
+		display: block;
+		width: 100%;
+		color: var(--dark-blue);
+		font-size: 25px;
+		background: #fff;
+		padding: 10px 0;
+		border-radius: 100px;
+		border-bottom: 2px solid var(--orange);
+		transition-property: color, background;
+		transition-duration: .4s;
+		transition-timing-function: linear;
+	}
+
+	.nav_item:hover .nav_link {
+		background: var(--orange);
+		color: #fff;
+	}
+
+	.nav_button {
+		display: none;
+	}
+
+	.header_main {
+		background: none;
+	}
+
+	.main_text {
+		padding-top: 150px;
+		padding-bottom: 30px;
+	}
+
+	.header_img {
+		top: 65px;
+		right: 50px;
+		border-radius: 45px;
+	}
+
+	.first_circle {
+		display: none;
+	}
+
+	.second_circle {
+		display: none;
+	}
+
+	.first_rhombus {
+		display: none;
+	}
+
+	/* COMPANIES */
+	.section_companies {
+		margin-bottom: 130px;
+	}
+	.companies_outer {
+		padding: 0 30px;
+	}
+
+	.companies_title {
+		font-size: 22px;
+	}
+
+	/* FEATURES */
+	.section_features {
+		display: none;
+	}
+
+	/* JACKPOTS */
+	.section_jackpots {
+		display: none;
+	}
+
+	/* DESIGN */
+	.section_design {
+		display: none;
+	}
+}

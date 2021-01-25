@@ -17,7 +17,10 @@ var accordion = {
 				})
 			}
 
-			self.open(self.faq_items[0]);
+			setTimeout(function() {
+				self.open(self.faq_items[0]);
+			}, 100);
+			
 		}
 
 		init_data();
@@ -26,18 +29,13 @@ var accordion = {
 
 	open: function(target) { 
 		target.classList.replace(this.closed_class, this.opened_class);
-		var child = target.children[1];
-		child.style.maxHeight = this.count_height(child) + 'px';
+		this.change_height(target);
 		this.close_other(target);
 	},
 
-	count_height: function(target) {
-		var height = 0;
-		for (var i = 0; i < target.children.length; i++) {
-			this.c = target.children[i].childNodes[0];
-			height += target.children[i].clientHeight;
-		}
-		return height;
+	change_height: function(target) {
+		var child = target.children[1];
+		child.style.maxHeight = child.scrollHeight + 'px';
 	},
 
 	close: function(target) {
@@ -48,7 +46,7 @@ var accordion = {
 
 	close_other: function(target) {
 		for (var i = 0; i < this.faq_items.length; i++) {
-			if(this.faq_items[i] !== target) {
+			if((this.faq_items[i] !== target) && (this.faq_items[i].className.indexOf(this.opened_class) !== -1)) {
 				this.close(this.faq_items[i]);
 			}
 			

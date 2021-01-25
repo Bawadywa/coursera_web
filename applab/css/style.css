@@ -3,7 +3,7 @@
 	padding: 0;
 	box-sizing: border-box;
 	outline: none;
-
+	-webkit-tap-highlight-color: transparent; 
 }
 
 :root {
@@ -12,6 +12,8 @@
 	--blue: #2500f9;
 	--light-blue: #299cfd;
 	--grey: #616368;
+	--shift: 90px;
+	--logo_duration: 1.5s;
 };
 
 
@@ -33,6 +35,7 @@ body {
 /* HEADER */
 
 .header {
+	position: relative;
 	padding-top: 95px;
 	margin-bottom: 115px;
 }
@@ -87,7 +90,7 @@ body {
 	}
 
 	50% {
-		transform: translateX(-90px);
+		transform: translateX(calc(-1*var(--shift)));
 	}
 
 	100% {
@@ -102,7 +105,7 @@ body {
 	}
 
 	50% {
-		transform: translateX(90px);
+		transform: translateX(var(--shift));
 	}
 
 	100% {
@@ -111,11 +114,11 @@ body {
 }
 
 .left {
-	animation: ease-in-out left 1.5s;
+	animation: ease-in-out left var(--logo_duration);
 }
 
 .right {
-	animation: ease-in-out right 1.5s;
+	animation: ease-in-out right var(--logo_duration);
 }
 
 .logo:hover .logo_left {
@@ -169,10 +172,48 @@ body {
 	background-color: var(--blue);
 	border-radius: 30px;
 	border: 1px solid var(--blue);
+	position: relative;
+	overflow: hidden;
 	cursor: pointer;
 	transition-property: background-color, color, border;
 	transition-duration: .3s;
 	transition-timing-function: linear;
+}
+
+.button_text {
+	position: relative;
+	z-index: 3;
+}
+
+.button_style > :not(.button_text) {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+	background: radial-gradient(#fff, #2500f9);
+	animation: circle .8s linear infinite;
+}
+
+@keyframes circle {
+	0% {
+		width: 0px;
+		height: 0px;
+		opacity: 1;
+	}
+
+	100% {
+		width: 500px;
+		height: 500px;
+		opacity: 0;
+	}
+}
+
+.button_active {
+	width: 400px;
+	height: 400px;
+	opacity: 1;
 }
 
 .nav_button {
@@ -237,7 +278,6 @@ body {
 	transform: rotateZ(45deg);
 	background: var(--orange);
 }
-
 
 /* HEADER MAIN TEXT */
 .header_main {
@@ -1048,9 +1088,11 @@ body {
 
 .card_features {
 	padding-top: 40px;
+	text-align: center;
 }
 
 .card_feature {
+	text-align: center;
 	display: block;
 	font-size: 16px;
 	font-weight: 400;
@@ -1104,7 +1146,7 @@ body {
 	display: block;
 }
 
-.section_purchase:after {
+.section_purchase::after {
 	content: "";
 	width: 100%;
 	height: 2px;
@@ -1179,7 +1221,7 @@ body {
 	position: relative;
 	display: flex;
 	align-items: center;
-	z-index: 100;
+	z-index: 10;
 }
 
 .slider {
@@ -1354,7 +1396,7 @@ body {
 	padding-right: 70px;
 	transform: translateY(0);
 	transition-property: max-height, padding, transform;
-	transition-duration: .4s, .4s, .4s;
+	transition-duration: .4s;
 	transition-timing-function: linear, linear, linear;
 }
 

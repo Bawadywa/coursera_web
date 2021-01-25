@@ -6,13 +6,17 @@ var menu = {
 
 		function init_data() {
 			self.menu_active_class = 'menu_active';
-			self.nav_active_class = 'nav_active'
+			self.nav_active_class = 'nav_active';
 		}
 
 		function event_listener () {
 			self.menu_burger.addEventListener('click', function(event) {
 				self.onclick(event);
-			})
+			});
+
+			self.nav_list.addEventListener('click', function(event) {
+				self.onclick(event);
+			});
 		}
 
 		init_data();

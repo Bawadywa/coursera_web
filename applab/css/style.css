@@ -173,6 +173,7 @@ body {
 	border-radius: 30px;
 	border: 1px solid var(--blue);
 	position: relative;
+	z-index: 1;
 	overflow: hidden;
 	cursor: pointer;
 	transition-property: background-color, color, border;
@@ -187,7 +188,7 @@ body {
 
 .button_style > :not(.button_text) {
 	position: absolute;
-	z-index: 1;
+	z-index: 0;
 	top: 0;
 	left: 0;
 	border-radius: 50%;
@@ -221,7 +222,7 @@ body {
 }
 
 .button_style:hover {
-	background-color: #fff;
+	background-color: transparent;
 	color: var(--blue);
 }
 
@@ -364,7 +365,9 @@ body {
 	font-weight: 500;
 	text-decoration: none;
 	color: var(--blue);
-	transition: color .3s linear;
+	transition-property: color;
+	transition-duration: .3s;
+	transition-timing-function: linear;
 }
 
 .link_style:hover {
@@ -707,7 +710,7 @@ body {
 /* SECTION REASONS */
 .section_reasons {
 	width: 100%;
-	margin-bottom: 170px;
+	margin-bottom: 105px;
 }
 
 .reasons_main {
@@ -729,18 +732,12 @@ body {
 	margin-bottom: 95px;
 }
 
-.reasons .row {
-	margin-bottom: 65px;
-}
-.reasons .row:last-child {
-	margin-bottom: 0;
-}
-
 .reasons .col {
+	margin-bottom: 65px;
 	margin-right: 90px; 
 }
 
-.reasons .col:last-child {
+.reasons .col:nth-child(3n) {
 	margin-right: 0;
 }
 
@@ -1112,7 +1109,9 @@ body {
 	margin-right: -50%;
 	opacity: 0;
 	transform: translateX(-50%);
-	transition: opacity .2s linear;
+	transition-property: opacity, color;
+	transition-duration: .2s, .3s;
+	transition-timing-function: linear;
 }
 
 .card_outer:hover {
@@ -1138,7 +1137,7 @@ body {
 	margin-bottom: -70px;
 }
 .trial:hover .card_link {
-	transition: opacity  .2s .4s linear;
+	transition-delay: .2s, 0s;
 	opacity: 1;
 }
 
@@ -1279,6 +1278,7 @@ body {
 	padding: 24px;
 	border-radius: 50%;
 	border: 1px solid #eff3f8;
+	cursor: pointer;
 	transition-property: background, border;
 	transition-duration: .3s;
 	transition-timing-function: linear;
@@ -1422,6 +1422,7 @@ body {
 	right: 25px;
 	border: 1px solid transparent;
 	background: transparent;
+	cursor: pointer;
 	transition: border .3s linear;
 }
 
@@ -1522,6 +1523,11 @@ body {
 	padding-left: 6px;
 }
 
+.download_link {
+	line-height: 0;
+	border-radius: 10px;
+}
+
 .download_img {
 	border-radius: 8px;
 	transition: box-shadow .3s linear;
@@ -1600,7 +1606,9 @@ body {
 	font-size: 30px;
 	color: #273043;
 	margin-right: 20px;
-	transition: color .3s linear;
+	transition-property: color, filter;
+	transition-duration: .3s;
+	transition-timing-function: linear;
 }
 
 .social_link:lastchild {

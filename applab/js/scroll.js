@@ -7,7 +7,7 @@ var scroll =  {
 			self.frames = 60;
 			self.current_frame = 0;
 			self.home_offset = 100;
-			self.offset = 40;
+			self.offset = document.documentElement.clientWidth > 992 ? 40 : 80;
 			self.middle = document.documentElement.scrollHeight / 2;
 		};
 
@@ -35,10 +35,11 @@ var scroll =  {
 
 		var self = this;
 		var duration = Math.floor((Math.abs(distance * self.duration) / self.middle) * 0.7);
+		var step = Math.floor(distance / self.frames);
 
 		var timer = setInterval(function() {
 			if(self.current_frame < self.frames){
-				window.scrollBy(0, Math.floor(distance / self.frames));
+				window.scrollBy(0, step);
 			}else {
 				clearInterval(timer);
 			}

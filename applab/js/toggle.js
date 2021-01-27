@@ -2,7 +2,7 @@ var toggle = {
 	real_toggle: document.querySelector('.real_toggle'), fake_toggle: document.querySelector('.fake_toggle'),
 	card_outers: document.querySelectorAll('.card_outer'), card_mains: document.querySelectorAll('.card_main'),
 	card_prices: document.querySelectorAll('.card_price'), card_terms: document.querySelectorAll('.card_term'),
-	card_buttons: document.querySelectorAll('.card_button'), card_titles: document.querySelectorAll('.card_title'),
+	card_button_texts: document.querySelectorAll('.card_button_text'), card_titles: document.querySelectorAll('.card_title'),
 	card_descs: document.querySelectorAll('.card_desc'), card_features: document.querySelectorAll('.card_feature'),
 	start: function() {
 		var self = this;
@@ -45,7 +45,7 @@ var toggle = {
 		for (var i = 0; i < this.card_outers.length; i++) {
 			this.card_prices[i].childNodes[0].nodeValue = this.price[this.index][i];
 			this.card_terms[i].innerText = this.term[this.index];
-			this.card_buttons[i].innerText = this.subscribe[this.index][i];
+			this.card_button_texts[i].innerText = this.subscribe[this.index][i];
 			this.card_titles[i].innerText = this.title[this.index][i];
 			this.card_descs[i].innerText = this.desc[this.index][i];
 	    }

@@ -381,7 +381,6 @@ body {
 	right: 85px;
 	box-shadow: 5px 0px 40px rgba(0, 0, 0, .2);
 	border-radius: 60px;
-
 }
 
 /* SECTION COMPANIES */
@@ -880,7 +879,7 @@ body {
 .ultimates_img {
 	position: relative;
 	margin-top: 20px;
-	right: 29px;
+	right: 0px;
 }
 
 /* SECTION PURCHASE */
@@ -1526,16 +1525,32 @@ body {
 .download_link {
 	line-height: 0;
 	border-radius: 10px;
+	position: relative;
+	overflow: hidden;
+}
+
+.download_link::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "";
+	width: 50px;
+	height: 100%;
+	background: #fff;
+	opacity: 0.5;
+	transform: skewX(45deg) translateX(250px);
+	box-shadow: 0px 0px 30px 10px var(--orange);
+	transition: transform .4s linear;
+}
+
+.download_link:hover::after {
+	transform: skewX(45deg) translateX(-150px);
 }
 
 .download_img {
 	border-radius: 8px;
-	transition: box-shadow .3s linear;
 }
 
-.download_link:hover .download_img {
-	box-shadow: 0px 0px 10px 10px var(--orange);
-}
 
 .download_link:nth-child(1) {
 	margin-right: 30px;
